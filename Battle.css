@@ -1,0 +1,1112 @@
+.ps-room.ps-room-opaque
+{
+  background: #333 !important;
+  color: #EEE !important;
+}
+
+.battle-log
+{
+  background: transparent !important;
+  border: 1px solid #333 !important;
+  color: #EEE !important;
+}
+
+.battle-log-add
+{
+  background: transparent !important;
+  border: none !important;
+  color: #EEE !important;
+}
+
+.battle-log-add .textbox
+{
+  transition: box-shadow .4s !important;
+  border: 1px solid #000 !important;
+  box-shadow: inset 0 0 3px #000, inset 0 0 9px #00EEFF !important;
+}
+
+.battle-log-add .textbox:hover,
+.battle-log-add .textbox:focus
+{
+  box-shadow: inset 0 0 5px #000, inset 0 0 12px #00EEFF !important;
+}
+
+.battle-log h2
+{
+  background: transparent !important;
+  border: 1px solid #00EEFF !important;
+  border-right: none !important;
+  color: #00FFEA !important;
+  box-shadow: 0px 0px 3px #00EEFF !important;
+}
+
+.battle-log .message-error
+{
+  color: #FF0000 !important;
+}
+
+.battle-log .infobox
+{
+  color: #EEE !important;
+  background: none !important;
+  border: none !important;
+}
+
+.battle-log code
+{
+  color: #FFFFFF !important;
+}
+
+.battle-log .chat small
+{
+  color: #AAA !important;
+}
+
+.battle-log .chat em
+{
+  color: #DDD !important;
+}
+
+.battle-log .utilichart h3,
+.battle-log .dexentry h3,
+.battle-log .resultheader h3
+{
+  background: #D4F5F7 !important;
+  border-color: #155281 !important;
+  border-right-color: #D4F5F7 !important;
+  color: #155281 !important;
+}
+
+.battle-log .utilichart .typecol img
+{
+  opacity: .8 !important;
+}
+
+.battle-controls .whatdo,
+.battle-log .utilichart .col,
+.battle-log .utilichart .col.numcol,
+.battle-log .utilichart .col.abilitycol,
+.battle-log .utilichart .col.twoabilitycol,
+.battle-log .utilichart .col.statcol,
+.battle-log .utilichart .col.namecol,
+.battle-log .utilichart .col.movenamecol,
+.battle-log .utilichart .col.labelcol em,
+.battle-log .utilichart .col.widelabelcol em,
+.battle-log .utilichart .col.pplabelcol em,
+.battle-log .infobox span
+{
+  color: #EEE !important;
+}
+
+.battle-log .utilichart .col.statcol em,
+.battle-log .utilichart .col.abilitydesccol,
+.battle-log .utilichart .col.itemdesccol,
+.battle-log .utilichart .col.movedesccol,
+.battle-log .utilichart .col.labelcol,
+.battle-log .utilichart .col.widelabelcol,
+.battle-log .utilichart .col.pplabelcol,
+.battle-log .utilichart .bstcol em,
+.battle-log .infobox .message-learn-list,
+.battle-log .infobox a
+{
+  color: #555 !important;
+}
+
+.battle-log .infobox .message-learn-canlearn
+{
+  color: #00FF00 !important;
+}
+
+.battle-log .infobox .message-learn-cannotlearn
+{
+  color: #FF0000 !important;
+}
+
+.battle-controls .controls
+{
+  background: #333 !important;
+}
+
+.battle-log .message-throttle-notice,
+{
+  color: #00EEFF !important;
+}
+
+.ps-room .battle-controls
+{
+  position: absolute !important;
+  top: 440px !important;
+  left: 0 !important;
+  width: 640px !important;
+  background: none !important;
+}
+
+.battle
+{
+  position: absolute !important;
+  text-align: left !important;
+  top: 0px !important;
+  left: -1px !important;
+  border: 0px solid #AAAAAA !important;
+  background: #CFD5DA !important;
+  width: 640px !important;
+  height: 360px !important;
+  overflow: hidden !important;
+  padding-top: 70px !important;
+  font-family: Verdana, sans-serif !important;
+  font-size: 10pt !important;
+}
+
+.backdrop
+{
+  width: 700px !important;
+  height: 500px !important;
+  position: absolute !important;
+  top: -90px !important;
+  left: -50px !important;
+  overflow: hidden !important;
+  opacity: 1 !important;
+}
+
+.backdrop[style*="bg-darkcity.jpg"]
+{
+  background: url(https://s9.postimg.org/416spzze7/Custom_Battle_BG1.jpg) no-repeat !important;
+  background-position: 51px 70px !important;
+  background-size: 639px 382px !important;
+}
+
+.backdrop:before
+{
+  content: "";
+  background: url(https://s3.postimg.org/7xhhuimwj/Top_Battle_Overlay.png) no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 20px;
+  left: 51px;
+  width: 639px;
+  height: 121px;
+  z-index: 1;
+}
+
+.backdrop:after
+{
+  content: "";
+  background: url(https://s11.postimg.org/4lzc0wz1f/Bottom_Battle_Overlay.png) center no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 393px;
+  left: 51px;
+  width: 639px;
+  height: 62px;
+  z-index: 1;
+}
+
+.psroom.psroomopaque .spacer
+{
+  margin-top: 0.5em !important;
+}
+
+.background
+{
+  position: absolute !important;
+  display: none !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+}
+
+.weather
+{
+  background-size: cover !important;
+}
+
+.statbar
+{
+  position: absolute !important;
+  width: 154px !important;
+  min-height: 40px !important;
+  padding: 2px 4px !important;
+  text-shadow: none !important;
+}
+
+.statbar strong
+{
+  display: block !important;
+  text-align: center !important;
+  color: #222222 !important;
+  text-shadow: #FFFFFF 1px 1px 0, #FFFFFF 1px -1px 0, #FFFFFF -1px 1px 0, #FFFFFF -1px -1px 0 !important;
+}
+
+.statbar strong small
+{
+  font-weight: normal !important;
+}
+
+.statbar .hpbar
+{
+  position: relative !important;
+  border: 1px solid #777777 !important;
+  background: #FCFEFF !important;
+  padding: 1px !important;
+  height: 8px !important;
+  margin: 0 0 0 0 !important;
+  width: 151px !important;
+  border-radius: 4px !important;
+}
+
+/* Do not edit this part unless you have a DEATH WISH */
+
+.statbar .hpbar .hp
+{
+  transition: border-top-color 1s, border-bottom-color 1s, border-right-color 1s, background-color 1s !important;
+  height: 4px !important;
+  border-top: 2px solid #00dd60 !important;
+  background: #00bb51 !important;
+  border-bottom: 2px solid #007734 !important;
+  border-right: 1px solid #007734 !important;
+  border-radius: 3px !important;
+}
+
+.statbar .hpbar .hp-yellow
+{
+  border-top-color: #f8e379 !important;
+  background-color: #f5d538 !important;
+  border-bottom-color: #be9f0a !important;
+  border-right-color: #be9f0a !important;
+}
+
+.statbar .hpbar .hp-red
+{
+  border-top-color: #f37f67 !important;
+  background-color: #ee4928 !important;
+  border-bottom-color: #a3260d !important;
+  border-right-color: #a3260 !importantd;
+}
+
+/* Do not edit this part unless you have a DEATH WISH */
+
+.statbar .hpbar .prevhp
+{
+  transition: background-color 1s !important;
+  background: #BBEECC !important;
+  height: 8px !important;
+  border-radius: 3px !important;
+}
+
+.statbar .hpbar .prevhp-yellow
+{
+  background-color: #fcf4ca !important;
+}
+
+.statbar .hpbar .prevhp-red
+{
+  background-color: #facec5 !important;
+}
+
+/* Edit this part and you're merely in DICEY WATERZ */
+
+.statbar .hpbar .hptext
+{
+  position: absolute !important;
+  background: #777777 !important;
+  color: #EEEEEE !important;
+  text-shadow: #000 0 1px 0 !important;
+  font-size: 9px !important;
+  width: 32px !important;
+  height: 12px !important;
+  top: -1px !important;
+  text-align: center !important;
+}
+
+.statbar .hpbar .hptextborder
+{
+  position: absolute !important;
+  background: transparent !important;
+  border-top: 1px solid #777777 !important;
+  border-bottom: 1px solid #777777 !important;
+  width: 4px !important;
+  top: -1px !important;
+  height: 10px !important;
+}
+
+.rstatbar .hpbar .hptext
+{
+  right: -32px !important;
+  border-radius: 0 4px 4px 0 !important;
+}
+
+.lstatbar .hpbar .hptext
+{
+  left: -32px !important;
+  border-radius: 4px 0 0 4px !important;
+}
+
+.rstatbar .hpbar .hptextborder
+{
+  right: -3px !important;
+}
+
+.lstatbar .hpbar .hptextborder
+{
+  left: -3px !important;
+}
+
+.statbar .status
+{
+  min-height: 10px !important;
+  font-size: 7pt !important;
+}
+
+.statbar span
+{
+  padding: 0px 1px !important;
+  border: 1px solid #FF4400 !important;
+  border-radius: 3px !important;
+}
+
+.statbar span.brn,
+.statbar span.psn,
+.statbar span.slp,
+.statbar span.par,
+.statbar span.frz
+{
+  padding: 1px 2px !important;
+  border: 0 !important;
+  border-radius: 3px !important;
+}
+
+.statbar span.brn
+{
+  background: #EE5533 !important;
+  color: #FFFFFF !important;
+}
+
+.statbar span.psn
+{
+  background: #A4009A !important;
+  color: #FFFFFF !important;
+}
+
+.statbar span.par
+{
+  background: #9AA400 !important;
+  color: #FFFFFF !important;
+}
+
+.statbar span.slp
+{
+  background: #AA77AA !important;
+  color: #FFFFFF !important;
+}
+
+.statbar span.frz
+{
+  background: #009AA4 !important;
+  color: #FFFFFF !important;
+}
+
+.statbar span.bad
+{
+  background: #FFE5E0 !important;
+  color: #FF4400 !important;
+  border-color: #FF4400 !important;
+}
+
+.statbar span.good
+{
+  background: #E5FFE0 !important;
+  color: #33AA00 !important;
+  border-color: #33AA00 !important;
+}
+
+.statbar span.neutral
+{
+  background: #F0F0F0 !important;
+  color: #555555 !important;
+  border-color: #555555 !important;
+}
+
+div.foehint div:nth-of-type(1)
+{
+  position: absolute !important;
+  top: 180px !important;
+  left: 390px !important;
+  width: 80px !important;
+  height: 60px !important;
+}
+
+
+/* Edit this part and you're merely in DICEY WATERZ */
+
+.leftbar
+{
+  position: absolute !important;
+  top: -58px !important;
+  left: 0 !important;
+  height: 95px !important;
+  width: 320px !important;
+  background-color: rgba(255,255,255,0) !important;
+  border: 0px solid rgba(215,215,215,0.5) !important;
+  color: #777777 !important;
+  background-image: url(https://s1.postimg.org/v72imipgv/Leftbar3.png) !important;
+  background-position: 0px 0px !important;
+  z-index: 3 !important;
+}
+
+.leftbar .trainer
+{
+  margin-top: 0px !important;
+}
+
+.leftbar .trainersprite
+{
+  position: absolute !important;
+  top: 88px !important;
+  left: 1px !important;
+  opacity: 1 !important;
+}
+
+.leftbar .trainer .teamicons
+{
+  float: right !important;
+  position: relative !important;
+  top: 58px !important;
+  left: -50px !important;
+  opacity: 1 !important;
+}
+
+.leftbar .teamicons:nth-of-type(2) span:nth-of-type(1)
+{
+  position: relative !important;
+  top: -3px !important;
+  left: 5px !important;
+}
+
+.leftbar .teamicons:nth-of-type(2) span:nth-of-type(2)
+{
+  position: relative !important;
+  top: 14px !important;
+  left: 2px !important;
+}
+
+.leftbar .teamicons:nth-of-type(2) span:nth-of-type(3)
+{
+  position: relative !important;
+  top: -3px !important;
+  left: 1px !important;
+}
+
+.leftbar .teamicons:nth-of-type(3) span:nth-of-type(1)
+{
+  position: relative !important;
+  top: 14px !important;
+  left: 11px !important;
+}
+
+.leftbar .teamicons:nth-of-type(3) span:nth-of-type(2)
+{
+  position: relative !important;
+  top: -3px !important;
+  left: 9px !important;
+}
+
+.leftbar .teamicons:nth-of-type(3) span:nth-of-type(3)
+{
+  position: relative  !important;
+  top: 14px !important;
+  left: 6px !important;
+}
+
+.leftbar .trainer strong
+{
+  text-align: left !important;
+  margin-top: 50px !important;
+  position: relative !important;
+  top: 122px !important;
+  left: 107px !important;
+  color: #FFF !important;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000 !important;
+}
+
+.rightbar
+{
+  position: absolute !important;
+  top: -58px !important;
+  right: 0 !important;
+  height: 95px !important;
+  width: 320px !important;
+  background-color: rgba(255,255,255,0) !important;
+  border: 0px solid rgba(215,215,215,0.5) !important;
+  color: #777777 !important;
+  background-image: url(https://s17.postimg.org/oif9dmjmn/Rightbar3.png) !important;
+  background-position: 0px 0px !important;
+  z-index: 3 !important;
+}
+
+.rightbar .trainer
+{
+  margin-top: 0px !important;
+}
+
+.rightbar .trainersprite
+{
+  position: absolute !important;
+  top: 218px !important;
+  right: 1px !important;
+  opacity: 1 !important;
+}
+
+.rightbar .trainer .teamicons
+{
+  float: left !important;
+  position: relative !important;
+  top: 188px !important;
+  right: -050px !important;
+  opacity: 1 !important;
+}
+
+.rightbar .teamicons:nth-of-type(2) span:nth-of-type(1)
+{
+  position: relative !important;
+  top: -3px !important;
+  right: 0px !important;
+}
+
+.rightbar .teamicons:nth-of-type(2) span:nth-of-type(2)
+{
+  position: relative !important;
+  top: 14px !important;
+  right: 2px !important;
+}
+
+.rightbar .teamicons:nth-of-type(2) span:nth-of-type(3)
+{
+  position: relative !important;
+  top: -3px !important;
+  right: 4px !important;
+}
+
+.rightbar .teamicons:nth-of-type(3) span:nth-of-type(1)
+{
+  position: relative !important;
+  top: 14px !important;
+  right: 6px !important;
+}
+
+.rightbar .teamicons:nth-of-type(3) span:nth-of-type(2)
+{
+  position: relative !important;
+  top: -3px !important;
+  right: 7px !important;
+}
+
+.rightbar .teamicons:nth-of-type(3) span:nth-of-type(3)
+{
+  position: relative !important;
+  top: 14px !important;
+  right: 9px !important;
+}
+
+.rightbar .trainer strong
+{
+  text-align: right !important;
+  margin-top: 50px !important;
+  position: relative !important;
+  top: 252px !important;
+  right: 107px !important;
+  color: #FFF !important;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000 !important;
+}
+
+/* Okay, you can realistically edit now without bringing down the Goddess's wrath */
+
+.trainer
+{
+  text-align: center !important;
+  margin-top: 180px !important;
+}
+
+.rightbar .trainer
+{
+  margin-top: 50px !important;
+}
+
+.trainer strong
+{
+  display: block !important;
+  font-size: 8pt !important;
+  margin-bottom: 2px !important;
+  overflow: hidden !important;
+}
+
+.trainer div.teamicons
+{
+  width: 97px !important;
+  height: 24px !important;
+}
+
+.teamicons span
+{
+  float: left !important;
+}
+
+.leftbar .trainer div.trainersprite,
+.leftbar .teamicons span
+{
+  transform: scaleX(-1) !important;
+}
+
+.trainersprite
+{
+  max-width: 80px !important;
+  max-height: 80px !important;
+}
+
+.turn
+{
+  position: absolute !important;
+  top: -46px !important;
+  left: 221px !important;
+  width: 200px !important;
+  height: 33px !important;
+  font-size: 12pt !important;
+  font-weight: bold !important;
+  font-family: 'Maven Pro', sans-serif !important;
+  text-transform: uppercase !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  padding-top: 35px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  opacity: 1 !important;
+  background: url(http://imageshack.com/a/img924/4251/FdqRaJ.png) !important;
+  text-align: center !important;
+  color: #FFF !important;
+  z-index: 2 !important;
+}
+
+.switchmenu button
+{
+  position: relative: !important;
+  overflow: hidden !important;
+  border-color: #00EEFF !important;
+  box-shadow: none !important;
+  color: #EEE !important;
+  text-shadow: 0 0 1px #000 !important;
+  background: #201E1E !important;
+}
+
+.switchmenu button.disabled,
+.switchmenu button:disabled
+{
+  border-color: #171616 !important;
+  box-shadow: none !important;
+  color: #EEE !important;
+  text-shadow: 0 0 1px #000 !important;
+  background: #201E1E !important;
+}
+
+.switchmenu button:after
+{
+  transition: all .55s cubic-bezier(0.19, 1, 0.22, 1);
+  content: "";
+  background: #FFF;
+  opacity: .2;
+  position: absolute;
+  height: 155px;
+  width: 50px;
+  left: -75px;
+  top: -50px;
+  transform: rotate(35deg);
+}
+
+.switchmenu button:hover:after
+{
+  left: 120%;
+}
+
+.switchmenu button.disabled:hover:after,
+.switchmenu button:disabled:hover:after
+{
+  left: -75px;
+}
+
+.movemenu button
+{
+  transition: all .3s !important;
+  background: #201E1E !important;
+  text-shadow: 0 0 2px #000 !important;
+  box-shadow: 0 0 2px #000 !important;
+  font-weight: 100 !important;
+  letter-spacing: 0 !important;
+}
+
+.movemenu button small
+{
+  text-shadow: 0 0 2px #000 !important;
+}
+
+.movemenu button.type-Bug,
+.movemenu button.type-Bug small
+{
+  border-color: #9AC126 !important;
+  color: #9AC126 !important;
+}
+
+.movemenu button.type-Bug:hover,
+.movemenu button.type-Bug:hover small
+{
+  color: #C4E26B !important;
+}
+
+.movemenu button.type-Dark,
+.movemenu button.type-Dark small
+{
+  border-color: #2F4252 !important;
+  color: #2F4252 !important;
+}
+
+.movemenu button.type-Dark:hover,
+.movemenu button.type-Dark:hover small
+{
+  color: #4F6E89 !important;
+}
+
+.movemenu button.type-Dragon,
+.movemenu button.type-Dragon small
+{
+  border-color: #850903 !important;
+  color: #850903 !important;
+}
+
+.movemenu button.type-Dragon:hover,
+.movemenu button.type-Dragon:hover small
+{
+  color: #DA0F05 !important;
+}
+
+.movemenu button.type-Electric,
+.movemenu button.type-Electric small
+{
+  border-color: #F3DA3C !important;
+  color: #F3DA3C !important;
+}
+
+.movemenu button.type-Electric:hover,
+.movemenu button.type-Electric:hover small
+{
+  color: #F8EA8E !important;
+}
+
+.movemenu button.type-Fairy,
+.movemenu button.type-Fairy small
+{
+  border-color: #FF93FF !important;
+  color: #FF93FF !important;
+}
+
+.movemenu button.type-Fairy:hover,
+.movemenu button.type-Fairy:hover small
+{
+  color: #FFC1FF !important;
+}
+
+.movemenu button.type-Fighting,
+.movemenu button.type-Fighting small
+{
+  border-color: #CA6720 !important;
+  color: #CA6720 !important;
+}
+
+.movemenu button.type-Fighting:hover,
+.movemenu button.type-Fighting:hover small
+{
+  color: #E59357 !important;
+}
+
+.movemenu button.type-Fire,
+.movemenu button.type-Fire small
+{
+  border-color: #fA3110 !important;
+  color: #fA3110 !important;
+}
+
+.movemenu button.type-Fire:hover,
+.movemenu button.type-Fire:hover small
+{
+  color: #FB6D56 !important;
+}
+
+.movemenu button.type-Flying,
+.movemenu button.type-Flying small
+{
+  border-color: #A3A9EB !important;
+  color: #A3A9EB !important;
+}
+
+.movemenu button.type-Flying:hover,
+.movemenu button.type-Flying:hover small
+{
+  color: #D5D8F6 !important;
+}
+
+.movemenu button.type-Ghost,
+.movemenu button.type-Ghost small
+{
+  border-color: #453F97 !important;
+  color: #453F97 !important;
+}
+
+.movemenu button.type-Ghost:hover,
+.movemenu button.type-Ghost:hover small
+{
+  color: #6E68C0 !important;
+}
+
+.movemenu button.type-Grass,
+.movemenu button.type-Grass small
+{
+  border-color: #12600A !important;
+  color: #12600A !important;
+}
+
+.movemenu button.type-Grass:hover,
+.movemenu button.type-Grass:hover small
+{
+  color: #1FA511 !important;
+}
+
+.movemenu button.type-Ground,
+.movemenu button.type-Ground small
+{
+  border-color: #BEAA61 !important;
+  color: #BEAA61 !important;
+}
+
+.movemenu button.type-Ground:hover,
+.movemenu button.type-Ground:hover small
+{
+  color: #DCD1A9 !important;
+}
+
+.movemenu button.type-Ice,
+.movemenu button.type-Ice small
+{
+  border-color: #A7E5FA !important;
+  color: #A7E5FA !important;
+}
+
+.movemenu button.type-Ice:hover,
+.movemenu button.type-Ice:hover small
+{
+  color: #E1F6FD !important;
+}
+
+.movemenu button.type-Normal,
+.movemenu button.type-Normal small
+{
+  border-color: #E6E6E6 !important;
+  color: #E6E6E6 !important;
+}
+
+.movemenu button.type-Normal:hover,
+.movemenu button.type-Normal:hover small
+{
+  color: #FFFFFF !important;
+}
+
+.movemenu button.type-Poison,
+.movemenu button.type-Poison small
+{
+  border-color: #921690 !important;
+  color: #921690 !important;
+}
+
+.movemenu button.type-Poison:hover,
+.movemenu button.type-Poison:hover small
+{
+  color: #D420D2 !important;
+}
+
+.movemenu button.type-Psychic,
+.movemenu button.type-Psychic small
+{
+  border-color: #FF63B7 !important;
+  color: #FF63B7 !important;
+}
+
+.movemenu button.type-Psychic:hover,
+.movemenu button.type-Psychic:hover small
+{
+  color: #FFA5D6 !important;
+}
+
+.movemenu button.type-Rock,
+.movemenu button.type-Rock small
+{
+  border-color: #6D5622 !important;
+  color: #6D5622 !important;
+}
+
+.movemenu button.type-Rock:hover,
+.movemenu button.type-Rock:hover small
+{
+  color: #A78434 !important;
+}
+
+.movemenu button.type-Steel,
+.movemenu button.type-Steel small
+{
+  border-color: #777976 !important;
+  color: #777976 !important;
+}
+
+.movemenu button.type-Steel:hover,
+.movemenu button.type-Steel:hover small
+{
+  color: #AAACA9 !important;
+}
+
+.movemenu button.type-Water,
+.movemenu button.type-Water small
+{
+  border-color: #43A3F7 !important;
+  color: #43A3F7 !important;
+}
+
+.movemenu button.type-Water:hover,
+.movemenu button.type-Water:hover small
+{
+  color: #96CCFB !important;
+}
+
+.movemenu button:hover
+{
+  background: #333 !important;
+  border-color: rgba(48, 48, 48, 0) !important;
+  box-shadow: 0 0 0 #000 !important;
+  font-weight: 900 !important;
+  letter-spacing: 1px !important;
+}
+
+.movemenu button:disabled
+{
+  background: #201E1E !important;
+  border-color: #171616 !important;
+  color: #171616 !important;
+  text-shadow: 0px 0px 2px #000 !important;
+  box-shadow: 0px 0px 2px #000 !important;
+}
+
+.movemenu button:disabled small
+{
+  color: #171616 !important;
+}
+
+.movemenu button:disabled:hover
+{
+  background: #201E1E !important;
+  border-color: #171616 !important;
+  box-shadow: 0px 0px 2px #000 !important;
+  font-weight: 100 !important;
+  letter-spacing: 0 !important;
+}
+
+.movemenu .megaevo
+{
+  transition: all .15s !important;
+  background: none !important;
+  border: none !important;
+  color: #EEE !important;
+  text-shadow: 0 0 0 #00EEFF !important;
+}
+
+.movemenu .megaevo:hover
+{
+  transition: all .25s !important;
+  text-shadow: 0 0 5px #00EEFF !important;
+}
+
+.battle-options button,
+.battle-controls .controls .button.replayDownloadButton,
+.battle-controls .controls button[name="saveReplay"],
+.battle-controls button[name="instantReplay"],
+.battle-controls button[name="rewindTurn"],
+.battle-controls button[name="skipTurn"],
+.battle-controls button[name="goToEnd"],
+.battle-controls button[name="switchSides"],
+.battle-controls button[name="closeAndMainMenu"],
+.battle-controls button[name="closeAndRematch"],
+.battle-controls button[name="undoChoice"],
+.battle-controls button[name="setTimer"],
+.battle-controls .button.timerbutton
+{
+  transition: all .15s linear !important;
+  position: relative !important;
+  background: #00E3D0 !important;
+  border: 1px solid #00BAC7 !important;
+  box-shadow: 1px 2px 6px #00C3D1 !important;
+  text-shadow: none !important;
+  color: #000 !important;
+  left: 0 !important;
+  top: 0 !important;
+}
+
+.battle-options button:hover,
+.battle-controls .controls .button.replayDownloadButton:hover,
+.battle-controls .controls button[name="saveReplay"]:hover,
+.battle-controls button[name="instantReplay"]:hover,
+.battle-controls button[name="rewindTurn"]:hover,
+.battle-controls button[name="skipTurn"]:hover,
+.battle-controls button[name="goToEnd"]:hover,
+.battle-controls button[name="switchSides"]:hover,
+.battle-controls button[name="closeAndMainMenu"]:hover,
+.battle-controls button[name="closeAndRematch"]:hover,
+.battle-controls button[name="undoChoice"]:hover,
+.battle-controls button[name="setTimer"]:hover,
+.battle-controls .button.timerbutton:hover,
+.battle-controls .button.disabled
+{
+  transition: all .25s linear !important;
+  position: relative !important;
+  background: #00D3C2 !important;
+  border: 1px solid #00B5C2 !important;
+  box-shadow: -1px -1px 2px #42F3FF !important;
+  color: #007A70 !important;
+  left: 2px !important;
+  top: 3px !important;
+}
+
+.messagebar
+{
+  background: #333 !important;
+  background: rgba(0,0,0,0) !important;
+  text-align: center !important;
+  color: #FFF !important;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000 !important;
+  font-weight: 550 !important;
+  z-index: 2 !important;
+}
+
+.battle-log .rated strong
+{
+  color: #FFF !important;
+  background: none repeat scroll 0% 0% #00EEFF !important;
+  padding: 1px 4px !important;
+  border-radius: 4px !important;
+}
+
+#tooltipwrapper
+{
+  z-index: 500000 !important;
+}
+
+.tooltipinner .tooltip,
+.tooltipinner .tooltip h2,
+.tooltipinner .tooltip .section
+{
+  background: #333 !important;
+  border: 1px solid #00EEFF !important;
+  color: #00FFEA !important;
+}

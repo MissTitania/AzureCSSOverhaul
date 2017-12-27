@@ -1,0 +1,3028 @@
+/*********************** GENERAL SPARKLES ***********************/
+
+@keyframes cardbuttonburst
+{
+  0%   {box-shadow: inset 0 0 11px rgba(165, 242, 252, 0);
+        outline-color: rgba(96, 224, 251, .7);
+        outline-offset: 0px;}
+  100% {box-shadow: inset 0 0 11px rgba(165, 242, 252, .75);
+        outline-color: rgba(96, 224, 251, 0);
+        outline-offset: 11px;}
+}
+
+@keyframes cardbuttonunburst
+{
+  0%   {box-shadow: inset 0 0 11px rgba(165, 242, 252, .75);
+        outline-color: rgba(96, 224, 251, 0);
+        outline-offset: 11px;}
+  100% {box-shadow: inset 0 0 11px rgba(165, 242, 252, 0);
+        outline-color: rgba(96, 224, 251, .7);
+        outline-offset: 0px;}
+}
+
+body
+{
+  transform: translateZ(0) !important; /* A fix for webkit sub-pixel font rendering failure during CSS3 transitions */
+  background: url("https://s1.postimg.org/e4lhxkyj3/Main_Background.png") no-repeat center;
+  background-size: cover !important;
+}
+
+.header
+{
+  background: url("https://s11.postimg.org/w9cbc1kk3/Logo.png") left no-repeat !important;
+}
+
+.header .logo
+{
+  opacity: 0 !important;
+}
+
+.header .maintabbarbottom
+{
+  background: linear-gradient(rgba(57, 0, 121, .72), #000) !important;
+  border-color: rgba(57, 0, 121, .72) #000 #000 !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+.tabbar.maintabbar
+{
+  overflow: hidden !important;
+}
+
+.tabbar a.button,
+.tabbar li:only-child a.button.cur,
+.tabbar li:only-child a.button.cur:hover,
+.tabbar li:only-child .button.cur.subtle-notifying
+{
+  transition: color .35s, box-shadow .35s !important;
+  position: relative !important;
+  background: #390079 !important;
+  border-color: #400088 !important;
+  border-style: solid !important;
+  color: #EEE !important;
+  text-shadow: none !important;
+  border-width: 2px !important;
+  top: -2px !important;
+  opacity: .75 !important;
+  box-shadow: 0 0 0 #004C81 !important;
+}
+
+.tabbar .overflow .button
+{
+  transition: color .35s, box-shadow .35s !important;
+  background: #390079 !important;
+  border-color: #390079 !important;
+  color: #EEE !important;
+  text-shadow: none !important;
+  opacity: .75 !important;
+  box-shadow: 0 0 0 #004C81 !important;
+}
+
+.tabbar a.button:hover,
+.tabbar .overflow .button:hover
+{
+  color: #004C81 !important;
+  box-shadow: 0 0 10px #004C81 !important;
+}
+
+.tabbar .button.subtle-notifying
+{
+  background: #470098 !important;
+  border-color: #2D0060 !important;
+  border-style: outset !important;
+  color: #EEE !important;
+}
+
+.tabbar .button.notifying
+{
+  background: #1D267D url("https://s14.postimg.org/7ps1mhmkx/Notification_Background_3.gif")  no-repeat center !important;
+  background-size: 100% 100% !important;
+  border-color: #2D0060 !important;
+  border-style: outset !important;
+}
+
+.tabbar a.button.cur,
+.tabbar a.button.cur:hover,
+.tabbar .button.cur.subtle-notifying
+{
+  background: #32006A !important;
+  border-color: #4C00A2 !important;
+  border-style: inset !important;
+  border-top: none !important;
+  color: #7700FE !important;
+  text-shadow: -1px -1px 1px #1F0041 !important;
+  z-index: 1 !important;
+  box-shadow: 0 0 0 #EEE !important;
+}
+
+.tabbar li:first-child a.button.cur,
+.tabbar li:first-child a.button.cur:hover,
+.tabbar li:first-child .button.cur.subtle-notifying
+{
+  border-left: none !important;
+}
+
+.tabbar li:last-child a.button.cur,
+.tabbar li:last-child a.button.cur:hover,
+.tabbar li:last-child .button.cur.subtle-notifying
+{
+  border-right: none !important;
+}
+
+.tabbar .closebutton,
+.tabbar li:only-child a.button.cur~.closebutton,
+.tabbar li:only-child a.button.cur:hover~.closebutton,
+.tabbar li:only-child .button.cur.subtle-notifying~.closebutton
+{
+  transition: color .3s !important;
+  position: relative !important;
+  color: #EEE !important;
+  top: -1px !important;
+}
+
+.tabbar a.button.cur~.closebutton,
+.tabbar a.button.cur:hover~.closebutton,
+.tabbar .button.cur.subtle-notifying~.closebutton
+{
+  color: #7700FE !important;
+  text-shadow: -1px -1px 1px #1F0041 !important;
+}
+
+.tabbar .closebutton:hover,
+.tabbar li:only-child a.button.cur~.closebutton:hover,
+.tabbar li:only-child .button.cur.subtle-notifying~.closebutton:hover
+{
+  color: #004C81 !important;
+}
+
+.tabbar a.button.cur~.closebutton:hover,
+.tabbar .button.cur.subtle-notifying~.closebutton:hover
+{
+  color: #023381 !important;
+  text-shadow: -1px -1px 1px #1F0041 !important;
+}
+
+.header .userbar .fa.fa-user
+{
+  display: none !important;
+}
+
+.header .userbar .username
+{
+  transition: all .35s !important;
+  display: inline-block !important;
+  transform: scaleX(0) !important;
+  transform-origin: 100% 50% !important;
+  opacity: 0 !important;
+}
+
+.header .userbar:hover .username
+{
+  transform: scaleX(1) !important;
+  opacity: 1 !important;
+}
+
+.header .userbar button
+{
+  transition: all .15s linear !important;
+  position: relative !important;
+  background: #400088 !important;
+  border: 1px solid #00406D !important;
+  text-shadow: 0 0 0 #390079 !important;
+  box-shadow: 1px 2px 6px #004677 !important;
+  color: #000 !important;
+  left: 0 !important;
+  top: 0 !important;
+  border-radius: 5px !important;
+}
+
+.header .userbar button:hover,
+.header .userbar button:disabled
+{
+  transition: all .2s linear !important;
+  position: relative !important;
+  background: #350071 !important;
+  border: 1px solid #003D68 !important;
+  text-shadow: -1px -1px 0 #220049 !important;
+  box-shadow: -1px -1px 2px #0088E7 !important;
+  color: #6400DF !important;
+  left: 2px !important;
+  top: 3px !important;
+  border-radius: 5px !important;
+}
+
+.ps-overlay
+{
+  background: rgba(0, 18, 30, .75) !important;
+}
+
+.ps-popup
+{
+  transition: all .5s !important;
+  border: solid 3px #1E5480 !important;
+  border-radius: 8px !important;
+  background: #07151E !important;
+  color: #1E5480 !important;
+  box-shadow: inset 0 0 3px #A5F2FC, inset 0 0 9px #1E5480, 0 0 3px #60E0FB, 0 0 5px #1E5480 !important;
+}
+
+.ps-popup hr
+{
+  border-color: #1E5480 !important
+}
+
+.ps-popup .card-button[name="send"]
+{
+  border: 1px solid #1E5480 !important;
+  border-radius: 0 !important;
+  color: #07151E !important;
+  text-shadow: 0 0 2px #A5F2FC !important;
+  font-weight: bold !important;
+  outline: 1px solid !important;
+  box-shadow: inset 0 0 11px rgba(165, 242, 252, 0) !important;
+  outline-color: rgba(96, 224, 251, .7) !important;
+  outline-offset: 0px !important;
+  animation: cardbuttonunburst .9s cubic-bezier(0.78, 0, 0.81, 0);
+}
+
+.ps-popup .card-button[name="send"]:not([style*="background-color"])
+{
+  background: #1E5480 !important;
+}
+
+.ps-popup .card-button[name="send"]:hover
+{
+  animation: cardbuttonburst .9s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.ps-popup .userdetails~.buttonbar button
+{
+  transition: all .3s ease-in-out !important;
+  background: #1E5480 !important;
+  border: 1px solid #1E5480 !important;
+  border-radius: 0 !important;
+  color: #07151E !important;
+  text-shadow: 0 0 2px #A5F2FC !important;
+  font-weight: bold !important;
+  box-shadow: inset 0 0 11px rgba(165, 242, 252, 0) !important;
+  border-radius: 4px !important;
+}
+
+.ps-popup .userdetails~.buttonbar button:hover
+{
+  transition: all .22s ease-in-out !important;
+  box-shadow: inset 0 0 11px rgba(165, 242, 252, .75) !important;
+  color: #000 !important;
+}
+
+.ps-popup a.ilink,
+.ps-popup a,
+.ps-popup .popupmenu li button
+{
+  transition: color .2s !important;
+  color: #6699FF !important;
+  background: none !important;
+}
+
+.ps-popup a.ilink:hover,
+.ps-popup a:hover,
+.ps-popup .popupmenu li button:hover
+{
+  transition: color .3s !important;
+  color: #2255FF !important;
+  background: none !important;
+}
+
+.ps-popup .popupmenu li h3
+{
+  text-align: center !important;
+  text-shadow: 1px 0 #60E0FB, -1px 0 #60E0FB, 0 1px #60E0FB, 0 -1px #60E0FB !important;
+  font-weight: bold !important;
+}
+
+.ps-popup .popupmenu li button
+{
+  text-align: center !important;
+}
+
+.ps-popup .buttonbar button
+{
+  transition: all .42s !important;
+  background: #FFF !important;
+  border: 1px solid #555 !important;
+  color: #000 !important;
+  text-shadow: none !important;
+  padding: 3px 8px !important;
+}
+
+.ps-popup .buttonbar button:hover
+{
+  background: #B8B8FF !important;
+  border: 1px solid #333 !important;
+}
+
+/*********************** MENU SPARKLES ***********************/
+
+@keyframes slidinggradient
+{
+  0%   {background-position: 0 150%;}
+  100% {background-position: 0 -50%;}
+}
+
+.mainmenuwrapper .rightmenu,
+.mainmenuwrapper .mainmenufooter
+{
+  display: none !important;
+}
+
+.mainmenuwrapper .leftmenu .activitymenu
+{
+  left: 76px !important;
+  width: 518px !important;
+}
+
+.mainmenuwrapper .leftmenu .activitymenu .pmbox
+{
+  width: 100% !important;
+}
+
+.teampane,
+.teamchartbox,
+.teamwrapper,
+.folderpane .folder.cur .selectFolder,
+.folderpane .folder.cur .selectFolder:hover
+{
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+
+.ladder table,
+.ladder td,
+.ladder th
+{
+  border: 1px solid #00EEFF !important;
+  box-shadow: inset 0 0 2px #00EEFF !important
+}
+
+.ladder th
+{
+  background: #00FFEA !important;
+  padding: 5px !important;
+  color: #000 !important;
+}
+
+.ladder td
+{
+  background: none !important;
+  color: #EEE !important;
+}
+
+.ladder h3
+{
+  text-shadow: 0 0 5px #FFF !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu
+{
+  transition: left .5s ease-in .42s !important;
+  position: relative !important;
+  left: -88.89% !important;
+  height: 484px !important;
+  padding: 15px 0 0 0 !important;
+  border: solid 3px #1E5480 !important;
+  border-radius: 0 11% 11% 0 !important;
+  border-left: none !important;
+  background: #07151E !important;
+  box-shadow: inset 0 0 3px #A5F2FC, inset 0 0 9px #1E5480, 0 0 3px #60E0FB, 0 0 5px #1E5480 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu:hover
+{
+  transition: left .5s ease-out 0s !important;
+  left: -2% !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup
+{
+  background: none !important;
+  width: 70% !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3)
+{
+  flex: 0 0 222px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: stretch !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(4)
+{
+  transform: rotate(270deg) !important;
+  transform-origin: 0 0 !important;
+  position: absolute !important;
+  left: 4% !important;
+  top: 454px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  max-width: 412px !important;
+  width: 412px !important;
+  height: 21px !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(4) .battleform
+{
+  position: absolute !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  left: 0 !important;
+  top: 0 !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(4) .battleform .roomlist
+{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: stretch !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(4) .battleform .roomlist div
+{
+  flex: 1 1 200px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  min-width: 20px !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(4) .battleform .roomlist div .ilink
+{
+  transition: all .3s ease-in-out !important;
+  background: #1E5480 !important;
+  border: 1px solid #1E5480 !important;
+  color: #07151E !important;
+  text-shadow: 0 0 2px #A5F2FC !important;
+  font-weight: bold !important;
+  box-shadow: inset 0 0 11px rgba(165, 242, 252, 0) !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(4) .battleform .roomlist div:nth-last-child(even) .ilink
+{
+  background: #5E1E80 !important;
+  border: 1px solid #5E1E80 !important;
+  box-shadow: inset 0 0 11px rgba(193, 166, 252, 0) !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(4) .battleform .roomlist div .ilink:hover
+{
+  transition: all .22s ease-in-out !important;
+  color: #000 !important;
+  border-color: #CCC !important;
+  box-shadow: inset 0 0 11px rgba(165, 242, 252, .75) !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(4) .battleform .roomlist div:nth-last-child(even) .ilink:hover
+{
+  box-shadow: inset 0 0 11px rgba(193, 166, 252, .75) !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:first-child:nth-last-child(4),
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:first-child:nth-last-child(4)+p,
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:first-child:nth-last-child(4)+p+p,
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:first-child:nth-last-child(5),
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:first-child:nth-last-child(5)+p,
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:first-child:nth-last-child(5)+p+p,
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:first-child:nth-last-child(5)+p+p+p,
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(4) .battleform p:first-child,
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(4) .battleform p.buttonbar
+{
+  display: none !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) .battleform
+{
+  flex: 1 0 42px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: stretch !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  width: 100% !important;
+  color: #1E5480 !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) .battleform p:first-child
+{
+  flex: 0 0 47px !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) .battleform p:nth-child(2)
+{
+  flex: 0 0 65px !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) .battleform p:nth-child(3)
+{
+  flex: 0 0 54px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: stretch !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) .battleform p:nth-child(4),
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) .battleform p:nth-child(5)
+{
+  flex: 1 0 22px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: stretch !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) .battleform .label,
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) .battleform button.select.formatselect,
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) .battleform button.select.teamselect
+{
+  text-align: center !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) .battleform button.select.teamselect strong
+{
+  color: #EEE !important;
+  margin: auto !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) .battleform button.select.teamselect small
+{
+  display: flex !important;
+  justify-content: space-around !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) .battleform button.select.teamselect small .picon
+{
+  flex: 0 0 40px !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) .battleform button.select
+{
+  position: relative !important;
+  overflow: hidden !important;
+  border-color: #1E5480 !important;
+  box-shadow: 0 0 3px #60E0FB, 0 0 5px #1E5480 !important;
+  color: #EEE !important;
+  background: none !important;
+  width: 100% !important;
+  margin: 3px !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) .battleform button.disabled,
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) .battleform button:disabled
+{
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) .battleform button.select:after
+{
+  transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+  content: "";
+  background: #FFF;
+  opacity: .2;
+  position: absolute;
+  height: 155px;
+  width: 50px;
+  left: -75px;
+  top: -50px;
+  transform: rotate(35deg);
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) .battleform button.select:hover:after
+{
+  left: 120%;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) .battleform button.disabled:hover:after,
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) .battleform button:disabled:hover:after
+{
+  left: -75px;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:nth-child(3) button br,
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:nth-child(3) button small
+{
+  display: none !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(2),
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:last-child
+{
+  flex: 0 0 108px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: stretch !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(2) p,
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:last-child p
+{
+  flex: 1 1 30px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: stretch !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) button[name="reconnect"],
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) button[name="cancelSearch"],
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:nth-child(3) button,
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(2) p button,
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:last-child p button
+{
+  transition: all .35s ease-in-out !important;
+  flex: 1 1 30px !important;
+  text-align: center !important;
+  width: auto !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  background: linear-gradient(#07151E, #390079, #004C81, #07151E) !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 300% !important;
+  background-position: 0 150% !important;
+  border: none !important;
+  border-radius: 0 !important;
+  color: #1E5480 !important;
+  text-shadow: 1px 0 1px #3F9ABE !important;
+  box-shadow: none !important;
+  font-size: 18px !important;
+  letter-spacing: 0 !important;
+  font-weight: 500 !important;
+  overflow: hidden !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) button[name="reconnect"]
+{
+  font-size: 24px !important;
+  font-weight: 600 !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) button[name="cancelSearch"]
+{
+  color: #EEE !important;
+  text-shadow: none !important;
+  font-size: 22px !important;
+  font-weight: 550 !important;
+  animation: slidinggradient .85s linear infinite;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) button[name="cancelSearch"]:after
+{
+  content: " Search";
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:nth-child(3) button
+{
+  background: linear-gradient(#07151E, #796A00, #810000, #07151E) !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 300% !important;
+  background-position: 0 150% !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:nth-child(3) button strong
+{
+  flex: 1 1 60px !important;
+  line-height: 54px !important;
+  text-align: center !important;
+  font-weight: 500 !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:nth-child(3) button:before
+{
+  transition: all .35s linear;
+  transform: translateX(-54px) rotate(-90deg) scaleX(-1);
+  transform-origin: 100% 100%;
+  flex: 0 0 54;
+  content: "";
+  width: 54px;
+  height: 54px;
+  float: left;
+  background: url("https://s13.postimg.org/6o6w9vp4n/Battle_Icon.png") center no-repeat;
+  background-size: cover;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:nth-child(3) button:hover:before
+{
+  transition: all .3s linear;
+  transform: translateX(-54px) rotate(0deg) scaleX(-1);
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:nth-child(3) button:after
+{
+  transition: all .35s linear;
+  transform: rotate(90deg);
+  transform-origin: 100% 100%;
+  flex: 0 0 54;
+  content: "";
+  width: 54px;
+  height: 54px;
+  float: right;
+  background: url("https://s13.postimg.org/6o6w9vp4n/Battle_Icon.png") center no-repeat;
+  background-size: cover;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:nth-child(3) button:hover:after
+{
+  transition: all .3s linear;
+  transform: rotate(0);
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) button[name="reconnect"]:hover,
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) button[name="cancelSearch"]:hover,
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:nth-child(3) button:hover,
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(2) p button:hover,
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:last-child p button:hover
+{
+  transition: all .3s ease-in-out !important;
+  color: #EEE !important;
+  text-shadow: 1px 0 0 #3F9ABE !important;
+  letter-spacing: 4px !important;
+  font-weight: 700 !important;
+  animation: slidinggradient .85s linear infinite;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) button[name="reconnect"]:hover
+{
+  font-weight: 800 !important;
+  letter-spacing: 5px !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) button[name="cancelSearch"]:hover
+{
+  background: linear-gradient(#07151E, #796A00, #810000, #07151E) !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 300% !important;
+  background-position: 0 150% !important;
+  letter-spacing: 5px !important;
+  font-weight: 750 !important;
+  animation: slidinggradient .85s linear infinite;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:nth-child(3) button:hover strong
+{
+  font-weight: 700 !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:last-child p button.disabled,
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:nth-child(3) button.disabled
+{
+  background: none !important;
+  color: #0D2637 !important;
+  text-shadow: -1px -1px 1px #000 !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:last-child p button.disabled:hover,
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:nth-child(3) button.disabled:hover
+{
+  color: #0D2637 !important;
+  text-shadow: -1px -1px 1px #000 !important;
+  letter-spacing: 0 !important;
+  font-weight: 500 !important;
+  animation: none;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:nth-child(3) button.disabled
+{
+  font-style: normal !important;
+  line-height: 54px !important;
+  text-align: center !important;
+}
+
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:nth-child(3) button.disabled:before,
+.mainmenuwrapper .leftmenu .mainmenu .menugroup:nth-last-child(3) p:nth-child(3) button.disabled:after
+{
+  background: none !important;
+}
+
+/*********************** CHAT SPARKLES ***********************/
+
+@keyframes neonglowtext
+{
+  0%   {text-shadow: 0 0 3px #FFF, 0 0 6px #FFF, 0 0 9px #FFF, 0 0 12px #07F, 0 0 21px #07F, 0 0 24px #07F, 0 0 30px #07F;}
+  100% {text-shadow: 0 0 1px #FFF, 0 0 2px #FFF, 0 0 3px #FFF, 0 0 4px #07F, 0 0 7px #07F, 0 0 8px #07F, 0 0 10px #07F;}
+}
+
+.ps-room.ps-room-light
+{
+  background: none !important;
+  border-color: #000 !important;
+}
+
+.ps-room.ps-room-light.scrollable
+{
+  background: rgba(48, 48, 48, 0.6) !important;
+}
+
+.chat-log
+{
+  background: rgba(48, 48, 48, 0.8) url("https://s17.postimg.org/8wyuwnxwv/Mascot3.png") top right no-repeat !important;
+  border: 2px solid #000 !important;
+  color: #EEE !important;
+}
+
+.chat-log .chat,
+.battle-log .chat
+{
+  background: none !important;
+}
+
+.chat-log .chat small
+{
+  color: rgba(0, 255, 234, .8) !important;
+}
+
+.chat.highlighted
+{
+  background: linear-gradient(to bottom right, #00AFDB, #00DBAC) !important;
+  color: #FFF !important;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000 !important;
+}
+
+.chat span.message-announce
+{
+  background: #1D267D url("https://s14.postimg.org/7ps1mhmkx/Notification_Background_3.gif")  no-repeat center !important;
+  background-size: 100% 150% !important;
+  color: #FFF !important;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000 !important;
+}
+
+.chat.revealed
+{
+  color: #FFF !important;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000 !important;
+  background: #AE0602 !important;
+}
+
+.chat:not(.highlighted):not(.revealed) em b
+{
+  text-shadow: 0 -1px 0 #FFF, 0 1px 0 #303030, 0 2px 0 #282828, 0 3px 0 #202020, 0 4px 0 #181818, 0 5px 0 #101010, 0 7px 10px rgba(0, 0, 0, 0.9) !important;
+}
+
+.chat.chatmessage-titaniahime:not(.highlighted):not(.revealed) em b,
+.chat.chatmessage-miyu:not(.highlighted):not(.revealed) em b
+{
+  color: #FFF !important;
+  animation: neonglowtext 1.1s ease-in-out infinite alternate;
+}
+
+.chat-log .chat em a,
+.chat-log .notice .ilink,
+.chat-log .notice .ilink strong
+{
+  transition: color .2s !important;
+  color: #6699FF !important;
+}
+
+.chat-log .chat em a:hover
+{
+  transition: color .3s !important;
+  color: #2255FF !important;
+}
+
+.chat-log .notice .ilink:hover,
+.chat-log .notice .ilink:hover strong
+{
+  transition: color .3s !important;
+  color: #2255FF !important;
+  text-decoration: none !important;
+}
+
+.chat-log .message-error
+{
+  color: #FF0000 !important;
+}
+
+.chat-log .infobox
+{
+  transition: all .45s !important;
+  background: rgba(0, 0, 0, 0) !important;
+  border-color: #000 !important;
+  box-shadow: inset 0 0 5px #00EEFF !important;
+  color: #EEE !important;
+  overflow: auto !important;
+}
+
+.chat-log .infobox:hover
+{
+  transition: all .45s !important;
+  background: rgba(0, 0, 0, .4) !important;
+  box-shadow: inset 0 0 11px #00EEFF !important;
+}
+
+.message-pm
+{
+  color: rgba(0, 255, 234, .5) !important;
+}
+
+.broadcast-red,
+.broadcast-green,
+.broadcast-blue
+{
+  border: 1px solid #000 !important;
+  color: #FFFFFF !important;
+  font-weight: #600 !important;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000 !important;
+}
+
+.broadcast-red
+{
+  background: #4A130D url("https://s9.postimg.org/w8bzbro7z/Broadcast_Red.jpg") center no-repeat !important;
+  background-size: cover !important;
+}
+
+.broadcast-green
+{
+  background: #214A0D url("https://s21.postimg.org/ban80mdmv/Broadcast_Green.jpg") center no-repeat !important;
+  background-size: cover !important;
+}
+
+.broadcast-blue
+{
+  background: #0D294A url("https://s1.postimg.org/csda7rklr/Broadcast_Blue.jpg") center no-repeat !important;
+  background-size: cover !important;
+}
+
+.chat-log .utilichart h3,
+.chat-log .dexentry h3,
+.chat-log .resultheader h3
+{
+  background: #D4F5F7 !important;
+  border-color: #155281 !important;
+  border-right-color: #D4F5F7 !important;
+  color: #155281 !important;
+}
+
+.chat-log .utilichart .typecol img
+{
+  opacity: .8 !important;
+}
+
+.chat-log .utilichart .col,
+.chat-log .utilichart .col.numcol,
+.chat-log .utilichart .col.abilitycol,
+.chat-log .utilichart .col.twoabilitycol,
+.chat-log .utilichart .col.statcol,
+.chat-log .utilichart .col.namecol,
+.chat-log .utilichart .col.movenamecol,
+.chat-log .utilichart .col.labelcol em,
+.chat-log .utilichart .col.widelabelcol em,
+.chat-log .utilichart .col.pplabelcol em,
+.chat-log .infobox span,
+.chat-log .uhtml-friendsdisplay tbody .card-button
+{
+  color: #EEE !important;
+}
+
+.chat-log .utilichart .col.statcol em,
+.chat-log .utilichart .col.abilitydesccol,
+.chat-log .utilichart .col.itemdesccol,
+.chat-log .utilichart .col.movedesccol,
+.chat-log .utilichart .col.labelcol,
+.chat-log .utilichart .col.widelabelcol,
+.chat-log .utilichart .col.pplabelcol,
+.chat-log .utilichart .bstcol em,
+.chat-log .infobox .message-learn-list,
+.chat-log .infobox a
+{
+  color: #555 !important;
+}
+
+.chat-log .infobox .message-learn-canlearn
+{
+  color: #00FF00 !important;
+}
+
+.chat-log .infobox .message-learn-cannotlearn
+{
+  color: #FF0000 !important;
+}
+
+.chat-log .uhtml-friendsdisplay tbody .card-button
+{
+  border-color: #EEE !important;
+}
+
+.chat-log .notice div[style*="background-color: cornsilk"]
+{
+  color: #000 !important;
+}
+
+.chat-log .notice .infobox .ladder td,
+.chat-log .notice .infobox .ladder div
+{
+  background: none !important;
+}
+
+.chat-log .notice .infobox .gangth
+{
+  background: #494669 !important;
+  border: 1px solid #B0ADD5 !important;
+  padding: 5px 15px !important;
+  text-align: center !important;
+  font-size: 13pt !important;
+  font-family: sans-serif !important;
+  color: #FFF !important;
+}
+
+.chat-log .notice .infobox .gangtd
+{
+  background: url("http://i.imgur.com/w6Fn1hR.png") !important;
+  border: 1px solid #B0ADD5 !important;
+  padding: 4px !important;
+  text-align: center !important;
+  font-size: 11pt !important;
+  font-family: sans-serif !important;
+  color: #000 !important;
+}
+
+.chat-log .notice .infobox .gangbtn
+{
+  background: #71C973 !important;
+  border: 1px solid #05DC0C !important;
+  padding: 4px 20px 6px !important;
+  color: #FFF !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8) !important;
+}
+
+.chat-log .notice .infobox .gangbtn:hover
+{
+  background: #85CE87 !important;
+  padding: 5px 20px !important;
+  box-shadow: none !important;
+}
+
+.chat-log .poll span
+{
+  color: #00FFEA !important;
+  border-color: #00EEFF !important;
+}
+
+.chat-log .pollButton
+{
+  background: #F8F8F8 !important;
+  color: #444 !important;
+  border: 1px solid #AAA !important;
+  margin: 2px !important;
+  padding-top: 2px !important;
+  padding-bottom: 3px !important;
+}
+
+.chat-log .pollButton:hover
+{
+  background: #F6F6F6 !important;
+  border-color: #337AB7 !important;
+  color: #276297 !important;
+}
+
+.chat-log .poll summary:focus
+{
+  outline-style: none !important;
+}
+
+.userlist
+{
+  background: rgba(48, 48, 48, 0.8) !important;
+  border: 1px solid #000 !important;
+  color: #000 !important;
+}
+
+.userlist .userlist-count
+{
+  color: #EEE !important;
+  box-shadow: inset 0 0 5px #000 !important;
+}
+
+.userlist.userlist-minimized .userlist-count,
+.userlist.userlist-maximized .userlist-count
+{
+  transition: background .45s !important;
+  background: rgba(0, 0, 0, 0) !important;
+}
+
+.userlist.userlist-minimized .userlist-count:hover,
+.userlist.userlist-maximized .userlist-count:hover
+{
+  transition: background .3s !important;
+  background: rgba(0, 0, 0, .3) !important;
+}
+
+.userlist li
+{
+  border-color: #000 !important;
+}
+
+.userlist li button
+{
+  transition: all .45s !important;
+  background: rgba(0, 0, 0, 0) !important;
+  box-shadow: inset 0 0 5px #000 !important;
+}
+
+.userlist li button:hover
+{
+  transition: all .3s !important;
+  background: rgba(0, 0, 0, .48) !important;
+  box-shadow: inset 0 0 0 #000 !important;
+}
+
+.userlist .userbutton .group
+{
+  color: rgba(0, 255, 234, .8) !important;
+}
+
+.chat-log-add
+{
+  background: rgba(48, 48, 48, 0.8) !important;
+  border-color: #000 !important;
+  box-shadow: inset 0 0 4px #000 !important;
+}
+
+.chat-log-add .textbox
+{
+  transition: background .4s, box-shadow .4s !important;
+  background: rgba(0, 0, 0, 0) !important;
+  border-color: #000 !important;
+  box-shadow: inset 0 0 4px #00EEFF !important;
+  color: #EEE !important;
+}
+
+.chat-log-add .textbox:hover,
+.chat-log-add .textbox:focus
+{
+  background: rgba(0, 0, 0, .35) !important;
+  box-shadow: inset 0 0 7px #00EEFF !important;
+}
+
+.chat-log-add small
+{
+  color: #EEE !important;
+}
+
+.pad .roomlist div .ilink,
+.pad .roomlisttop .button,
+.pad button[name="refresh"],
+.pad button[name="close"],
+.pad button[name="closeHide"],
+.pad button[name="joinRoomPopup"],
+.chat-log-add button,
+.ladder.pad button
+{
+  transition: all .15s linear !important;
+  position: relative !important;
+  background: #00E3D0 !important;
+  border: 1px solid #00BAC7 !important;
+  box-shadow: 1px 2px 6px #00C3D1 !important;
+  text-shadow: none !important;
+  color: #000 !important;
+  left: 0 !important;
+  top: 0 !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  border-radius: 5px !important;
+}
+
+.pad .roomlist div .ilink:hover,
+.pad .roomlisttop .button:hover,
+.pad button[name="refresh"]:hover,
+.pad button[name="close"]:hover,
+.pad button[name="closeHide"]:hover,
+.pad button[name="joinRoomPopup"]:hover,
+.chat-log-add button:hover,
+.ladder.pad button:hover
+{
+  transition: all .2s linear !important;
+  position: relative !important;
+  background: #00D3C2 !important;
+  border: 1px solid #00B5C2 !important;
+  box-shadow: -1px -1px 2px #42F3FF !important;
+  color: #007A70 !important;
+  left: 2px !important;
+  top: 3px !important;
+}
+
+.pad .select.formatselect
+{
+  overflow: hidden !important;
+  border-color: #00EEFF !important;
+  box-shadow: none !important;
+  color: #EEE !important;
+  text-shadow: 0 0 1px #000 !important;
+  background: #201E1E !important;
+  text-align: center !important;
+  position: relative !important;
+}
+
+.pad .select.formatselect:after
+{
+  transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+  content: "";
+  background: #FFF;
+  opacity: .2;
+  position: absolute;
+  height: 155px;
+  width: 50px;
+  left: -75px;
+  top: -50px;
+  transform: rotate(35deg);
+}
+
+.pad .select.formatselect:hover:after
+{
+  left: 120%;
+}
+
+.pad h2,
+.pad label,
+.pad p
+{
+  color: #111 !important;
+  text-shadow: 0 0 5px #FFF !important;
+}
+
+.pad .roomlist>label
+{
+  transition: text-shadow .4s !important;
+  text-shadow: 0 0 5px #FFF !important;
+}
+
+.pad .roomlist>label:hover
+{
+  transition: text-shadow .35s !important;
+  text-shadow: 0 0 9px #00EEFF !important;
+}
+
+.pad .roomcounters .picon.icon-left
+{
+  position: relative !important;
+  top: 4px !important;
+  background: url("https://s3.postimg.org/6qt4qwpqb/Popplio.png") bottom no-repeat !important;
+}
+
+.pad .roomcounters .picon.icon-right
+{
+  background: url("https://s24.postimg.org/rc1d0kq9h/Brionne.png") bottom no-repeat !important;
+}
+
+.pad .roomlist .picon
+{
+  background: url("https://s16.postimg.org/5mt07y139/Primarina.png") bottom no-repeat !important;
+}
+
+/*********************** PM BOX SPARKLES ***********************/
+
+@keyframes pmappearanimation
+{
+  0%   {transform: scaleX(.5) scaleY(0);
+        opacity: 0;}
+  100% {transform: scaleX(1) scaleY(1);
+        opacity: 1;}
+}
+
+@keyframes challengebuttonburst
+{
+  0%   {box-shadow: inset 0 0 11px rgba(165, 242, 252, 0);
+        outline-color: rgba(96, 224, 251, .7);
+        outline-offset: 0px;}
+  100% {box-shadow: inset 0 0 11px rgba(165, 242, 252, .75);
+        outline-color: rgba(96, 224, 251, 0);
+        outline-offset: 11px;}
+}
+
+@keyframes challengebuttonunburst
+{
+  0%   {box-shadow: inset 0 0 11px rgba(165, 242, 252, .75);
+        outline-color: rgba(96, 224, 251, 0);
+        outline-offset: 11px;}
+  100% {box-shadow: inset 0 0 11px rgba(165, 242, 252, 0);
+        outline-color: rgba(96, 224, 251, .7);
+        outline-offset: 0px;}
+}
+
+@keyframes notificationflash
+{
+  0%   {background: #1E5480;}
+  100% {background: #A5F2FC;}
+}
+
+@keyframes notificationflash2
+{
+  0%   {border-color: #1E5480;}
+  100% {border-color: #A5F2FC;}
+}
+
+@keyframes notificationflash3
+{
+  0%   {border-color: #1E5480; color: #1E5480;}
+  100% {border-color: #A5F2FC; color: #A5F2FC;}
+}
+
+@keyframes notificationflashduplicate
+{
+  0%   {background: #1E5480;}
+  100% {background: #A5F2FC;}
+}
+
+@keyframes notificationflash2duplicate
+{
+  0%   {border-color: #1E5480;}
+  100% {border-color: #A5F2FC;}
+}
+
+@keyframes notificationflash3duplicate
+{
+  0%   {border-color: #1E5480; color: #1E5480;}
+  100% {border-color: #A5F2FC; color: #A5F2FC;}
+}
+
+.pm-window
+{
+  transform: translateZ(0) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 3px #60E0FB, 0 0 5px #1E5480 !important;
+  transform-origin: 50% 0 !important;
+  animation: pmappearanimation .45s ease-in;
+}
+
+.pm-window h3.pm-notifying:first-child:nth-last-child(3),
+.pm-window h3.pm-notifying:first-child:nth-last-child(3)~.pm-log-add
+{
+  animation: notificationflash 1.25s ease-in-out 0s infinite alternate;
+}
+
+.pm-window h3.pm-notifying:first-child:nth-last-child(3)~.pm-log
+{
+  animation: notificationflash2 1.25s ease-in-out 0s infinite alternate;
+}
+
+.pm-window h3.pm-notifying:first-child:nth-last-child(3)~.challenge
+{
+  animation: notificationflash3 1.25s ease-in-out 0s infinite alternate;
+}
+
+.pm-window h3.pm-notifying:first-child:nth-last-child(4),
+.pm-window h3.pm-notifying:first-child:nth-last-child(4)~.pm-log-add
+{
+  animation: notificationflashduplicate 1.25s ease-in-out 0s infinite alternate;
+}
+
+.pm-window h3.pm-notifying:first-child:nth-last-child(4)~.pm-log
+{
+  animation: notificationflash2duplicate 1.25s ease-in-out 0s infinite alternate;
+}
+
+.pm-window h3.pm-notifying:first-child:nth-last-child(4)~.challenge
+{
+  animation: notificationflash3duplicate 1.25s ease-in-out 0s infinite alternate;
+}
+
+.pm-window h3.pm-minimized~.pm-log,
+.pm-window h3.pm-minimized~.pm-log-add
+{
+  display: block !important;
+}
+
+.pm-window h3,
+.pm-window h3:first-child:nth-last-child(4)
+{
+  transition: transform .6s linear, border-radius .6s linear !important;
+  transform: rotateY(0deg) !important;
+  background: #1E5480 !important;
+  color: #07151E !important;
+  border: none !important;
+  border-radius: 7px 7px 0 0 !important;
+  text-shadow: 0 0 2px #A5F2FC !important;
+}
+
+.pm-window h3.pm-minimized
+{
+  transform: rotateY(360deg) !important;
+  border-radius: 7px !important;
+}
+
+.pm-window h3 small
+{
+  color: #07151E !important;
+  text-shadow: 0 0 2px #A5F2FC !important;
+}
+
+.pm-window h3 .minimizebutton
+{
+  position: relative !important;
+  left: -6px !important;
+  font-size: 0 !important;
+}
+
+.pm-window h3 .closebutton
+{
+  position: relative !important;
+  left: -1px !important;
+  font-size: 0 !important;
+}
+
+.pm-window h3 .minimizebutton:before,
+.pm-window h3 .closebutton:before
+{
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  float: left;
+}
+
+.pm-window h3 .minimizebutton:after,
+.pm-window h3 .closebutton:after
+{
+  transition: opacity .48s;
+  content: "";
+  display: inline-block;
+  margin-left: -17px;
+  width: 17px;
+  height: 17px;
+  float: left;
+  opacity: 0;
+}
+
+.pm-window h3 .minimizebutton:before
+{
+  background: url("https://s2.postimg.org/ggbx3sfsp/Minimize_Icon.png") no-repeat center;
+  background-size: cover;
+}
+
+.pm-window h3 .minimizebutton:after
+{
+  background: url("https://s3.postimg.org/c0krwa9w3/Minimize_Icon_Hover.png") no-repeat center;
+  background-size: cover;
+}
+
+.pm-window h3 .closebutton:before
+{
+  background: url("https://s21.postimg.org/m94ev9z47/Close_Icon2.png") no-repeat center;
+  background-size: cover;
+}
+
+.pm-window h3 .closebutton:after
+{
+  background: url("https://s9.postimg.org/r3hnr594f/Close_Icon_Hover2.png") no-repeat center;
+  background-size: cover;
+}
+
+.pm-window h3:hover .minimizebutton:after,
+.pm-window h3 .closebutton:hover:after,
+.pm-window h3.pm-minimized .minimizebutton:after,
+.pm-window h3.pm-minimized .closebutton:hover+.minimizebutton:after
+{
+  opacity: 1;
+}
+
+.pm-window h3 .closebutton:hover+.minimizebutton:after,
+.pm-window h3.pm-minimized:hover .minimizebutton:after
+{
+  opacity: 0;
+}
+
+.pm-window .pm-log
+{
+  transition: transform .6s linear 0s, opacity .6s linear 0s, max-height .6s linear 0s, min-height .6s linear 0s, border-width 0s linear 0s !important;
+  transform: rotateY(0deg) !important;
+  background: rgba(7, 21, 30, 0.8) !important;
+  color: #EEE !important;
+  border: 3px solid #1E5480 !important;
+  box-shadow: inset 0 0 3px #A5F2FC, inset 0 0 9px #1E5480 !important;
+  opacity: 1 !important;
+  min-height: 50px !important;
+  max-height: 300px !important;
+}
+
+.pm-window h3.pm-minimized~.pm-log
+{
+  transition: transform .6s linear 0s, opacity .6s linear 0s, max-height .6s linear 0s, min-height .6s linear 0s, border-width 0s linear .6s !important;
+  transform: rotateY(360deg) !important;
+  opacity: 0 !important;
+  min-height: 0 !important;
+  max-height: 0 !important;
+  border-width: 0 !important;
+}
+
+.pm-window .pm-log .chat
+{
+  background: none !important;
+  text-shadow: none !important;
+}
+
+.pm-window .pm-log .chat small
+{
+  color: rgba(0, 255, 234, .8) !important;
+}
+
+.pm-window .pm-log .chat em a
+{
+  transition: color .15s !important;
+  color: #6699FF !important;
+}
+
+.pm-window .pm-log .chat em a:hover
+{
+  transition: color .25s !important;
+  color: #2255FF !important;
+}
+
+.pm-window .pm-log .message-error
+{
+  color: #FF0000 !important;
+}
+
+.pm-window .pm-log-add
+{
+  transition: transform .6s linear, opacity .6s linear, max-height .6s linear !important;
+  transform: rotateY(0deg) !important;
+  background: #1E5480 !important;
+  border: none !important;
+  border-radius: 0 0 7px 7px !important;
+  opacity: 1 !important;
+  min-height: 0 !important;
+  max-height: 80px !important;
+}
+
+.pm-window h3.pm-minimized~.pm-log-add
+{
+  transform: rotateY(360deg) !important;
+  opacity: 0 !important;
+  max-height: 0 !important;
+}
+
+.pm-window .pm-log-add .textbox
+{
+  transition: box-shadow .4s !important;
+  background: #07151E !important;
+  color: #EEE !important;
+  border: none !important;
+  box-shadow: inset 0 0 3px #A5F2FC, inset 0 0 9px #1E5480 !important;
+}
+
+.pm-window .pm-log-add .textbox:hover,
+.pm-window .pm-log-add .textbox:focus
+{
+  box-shadow: inset 0 0 5px #A5F2FC, inset 0 0 12px #1E5480 !important;
+}
+
+.pm-window .pm-log-add .chatbox.nolabel
+{
+  color: #07151E !important;
+  text-shadow: 0 0 2px #A5F2FC !important;
+}
+
+.pm-window .challenge
+{
+  transition: border-radius .6s linear !important;
+  background: rgba(7, 21, 30, 0.8) !important;
+  color: #1E5480 !important;
+  border: 3px solid #1E5480 !important;
+  border-radius: 0 !important;
+  box-shadow: inset 0 0 3px #A5F2FC, inset 0 0 9px #1E5480 !important;
+}
+
+.pm-window h3.pm-minimized~.challenge
+{
+  border-radius: 0 0 3px 3px !important;
+}
+
+.pm-window .challenge .battleform
+{
+  width: 100% !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  align-content: space-around !important;
+}
+
+.pm-window .challenge .battleform p
+{
+  flex: 0 0 230px !important;
+}
+
+.pm-window .challenge .battleform p:first-child
+{
+  text-align: center !important;
+  order: 3 !important;
+}
+
+.pm-window .challenge .battleform p:first-child:nth-last-child(4)+p
+{
+  order: 1 !important;
+}
+
+.pm-window .challenge .battleform p:first-child:nth-last-child(4)+p+p
+{
+  order: 2 !important;
+}
+
+.pm-window .challenge .battleform p:last-child
+{
+  order: 4 !important;
+}
+
+.pm-window .challenge .battleform .label,
+.pm-window .challenge .battleform button.select.formatselect
+{
+  text-align: center !important;
+}
+
+.pm-window .challenge .battleform button.select.teamselect strong
+{
+  color: #EEE !important;
+  margin: auto !important;
+}
+
+.pm-window .challenge .battleform button.select.teamselect small
+{
+  display: flex !important;
+  justify-content: space-around !important;
+}
+
+.pm-window .challenge .battleform button.select.teamselect small .picon
+{
+  flex: 0 0 40px !important;
+}
+
+.pm-window .challenge button.select
+{
+  position: relative !important;
+  overflow: hidden !important;
+  border-color: #1E5480 !important;
+  box-shadow: 0 0 3px #60E0FB, 0 0 5px #1E5480 !important;
+  color: #EEE !important;
+  background: none !important;
+}
+
+.pm-window .challenge button.disabled,
+.pm-window .challenge button:disabled
+{
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.pm-window .challenge button.select:after
+{
+  transition: left .5s cubic-bezier(0.19, 1, 0.22, 1);
+  content: "";
+  background: #FFF;
+  opacity: .2;
+  position: absolute;
+  height: 155px;
+  width: 50px;
+  left: -75px;
+  top: -50px;
+  transform: rotate(35deg);
+}
+
+.pm-window .challenge button.select:hover:after
+{
+  left: 120%;
+}
+
+.pm-window .challenge button.disabled:hover:after,
+.pm-window .challenge button:disabled:hover:after
+{
+  left: -75px;
+}
+
+.pm-window .challenge .battleform .buttonbar button
+{
+  background: #1E5480 !important;
+  border: 1px solid #1E5480 !important;
+  color: #07151E !important;
+  text-shadow: 0 0 2px #A5F2FC !important;
+  font-weight: bold !important;
+  outline: 1px solid !important;
+  animation: challengebuttonunburst .9s cubic-bezier(0.78, 0, 0.81, 0) forwards;
+}
+
+.pm-window .challenge .battleform .buttonbar button:hover
+{
+  animation: challengebuttonburst .9s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+/*********************** BATTLE SPARKLES ***********************/
+
+.ps-room.ps-room-opaque
+{
+  background: #333 !important;
+  color: #EEE !important;
+}
+
+.battle-log
+{
+  background: transparent !important;
+  border: 1px solid #333 !important;
+  color: #EEE !important;
+}
+
+.battle-log-add
+{
+  background: transparent !important;
+  border: none !important;
+  color: #EEE !important;
+}
+
+.battle-log-add .textbox
+{
+  transition: box-shadow .4s !important;
+  border: 1px solid #000 !important;
+  box-shadow: inset 0 0 3px #000, inset 0 0 9px #00EEFF !important;
+}
+
+.battle-log-add .textbox:hover,
+.battle-log-add .textbox:focus
+{
+  box-shadow: inset 0 0 5px #000, inset 0 0 12px #00EEFF !important;
+}
+
+.battle-log h2
+{
+  background: transparent !important;
+  border: 1px solid #00EEFF !important;
+  border-right: none !important;
+  color: #00FFEA !important;
+  box-shadow: 0px 0px 3px #00EEFF !important;
+}
+
+.battle-log .message-error
+{
+  color: #FF0000 !important;
+}
+
+.battle-log .infobox
+{
+  color: #EEE !important;
+  background: none !important;
+  border: none !important;
+}
+
+.battle-log code
+{
+  color: #FFFFFF !important;
+}
+
+.battle-log .chat small
+{
+  color: #AAA !important;
+}
+
+.battle-log .chat em
+{
+  color: #DDD !important;
+}
+
+.battle-log .utilichart h3,
+.battle-log .dexentry h3,
+.battle-log .resultheader h3
+{
+  background: #D4F5F7 !important;
+  border-color: #155281 !important;
+  border-right-color: #D4F5F7 !important;
+  color: #155281 !important;
+}
+
+.battle-log .utilichart .typecol img
+{
+  opacity: .8 !important;
+}
+
+.battle-controls .whatdo,
+.battle-log .utilichart .col,
+.battle-log .utilichart .col.numcol,
+.battle-log .utilichart .col.abilitycol,
+.battle-log .utilichart .col.twoabilitycol,
+.battle-log .utilichart .col.statcol,
+.battle-log .utilichart .col.namecol,
+.battle-log .utilichart .col.movenamecol,
+.battle-log .utilichart .col.labelcol em,
+.battle-log .utilichart .col.widelabelcol em,
+.battle-log .utilichart .col.pplabelcol em,
+.battle-log .infobox span
+{
+  color: #EEE !important;
+}
+
+.battle-log .utilichart .col.statcol em,
+.battle-log .utilichart .col.abilitydesccol,
+.battle-log .utilichart .col.itemdesccol,
+.battle-log .utilichart .col.movedesccol,
+.battle-log .utilichart .col.labelcol,
+.battle-log .utilichart .col.widelabelcol,
+.battle-log .utilichart .col.pplabelcol,
+.battle-log .utilichart .bstcol em,
+.battle-log .infobox .message-learn-list,
+.battle-log .infobox a
+{
+  color: #555 !important;
+}
+
+.battle-log .infobox .message-learn-canlearn
+{
+  color: #00FF00 !important;
+}
+
+.battle-log .infobox .message-learn-cannotlearn
+{
+  color: #FF0000 !important;
+}
+
+.battle-controls .controls
+{
+  background: #333 !important;
+}
+
+.battle-log .message-throttle-notice,
+{
+  color: #00EEFF !important;
+}
+
+.ps-room .battle-controls
+{
+  position: absolute !important;
+  top: 440px !important;
+  left: 0 !important;
+  width: 640px !important;
+  background: none !important;
+}
+
+.battle
+{
+  position: absolute !important;
+  text-align: left !important;
+  top: 0px !important;
+  left: -1px !important;
+  border: 0px solid #AAAAAA !important;
+  background: #CFD5DA !important;
+  width: 640px !important;
+  height: 360px !important;
+  overflow: hidden !important;
+  padding-top: 70px !important;
+  font-family: Verdana, sans-serif !important;
+  font-size: 10pt !important;
+}
+
+.backdrop
+{
+  width: 700px !important;
+  height: 500px !important;
+  position: absolute !important;
+  top: -90px !important;
+  left: -50px !important;
+  overflow: hidden !important;
+  opacity: 1 !important;
+}
+
+.backdrop[style*="bg-darkcity.jpg"]
+{
+  background: url(https://s9.postimg.org/416spzze7/Custom_Battle_BG1.jpg) no-repeat !important;
+  background-position: 51px 70px !important;
+  background-size: 639px 382px !important;
+}
+
+.backdrop:before
+{
+  content: "";
+  background: url(https://s3.postimg.org/7xhhuimwj/Top_Battle_Overlay.png) no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 20px;
+  left: 51px;
+  width: 639px;
+  height: 121px;
+  z-index: 1;
+}
+
+.backdrop:after
+{
+  content: "";
+  background: url(https://s11.postimg.org/4lzc0wz1f/Bottom_Battle_Overlay.png) center no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 393px;
+  left: 51px;
+  width: 639px;
+  height: 62px;
+  z-index: 1;
+}
+
+.psroom.psroomopaque .spacer
+{
+  margin-top: 0.5em !important;
+}
+
+.background
+{
+  position: absolute !important;
+  display: none !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+}
+
+.weather
+{
+  background-size: cover !important;
+}
+
+.statbar
+{
+  position: absolute !important;
+  width: 154px !important;
+  min-height: 40px !important;
+  padding: 2px 4px !important;
+  text-shadow: none !important;
+}
+
+.statbar strong
+{
+  display: block !important;
+  text-align: center !important;
+  color: #222222 !important;
+  text-shadow: #FFFFFF 1px 1px 0, #FFFFFF 1px -1px 0, #FFFFFF -1px 1px 0, #FFFFFF -1px -1px 0 !important;
+}
+
+.statbar strong small
+{
+  font-weight: normal !important;
+}
+
+.statbar .hpbar
+{
+  position: relative !important;
+  border: 1px solid #777777 !important;
+  background: #FCFEFF !important;
+  padding: 1px !important;
+  height: 8px !important;
+  margin: 0 0 0 0 !important;
+  width: 151px !important;
+  border-radius: 4px !important;
+}
+
+/* Do not edit this part unless you have a DEATH WISH */
+
+.statbar .hpbar .hp
+{
+  transition: border-top-color 1s, border-bottom-color 1s, border-right-color 1s, background-color 1s !important;
+  height: 4px !important;
+  border-top: 2px solid #00dd60 !important;
+  background: #00bb51 !important;
+  border-bottom: 2px solid #007734 !important;
+  border-right: 1px solid #007734 !important;
+  border-radius: 3px !important;
+}
+
+.statbar .hpbar .hp-yellow
+{
+  border-top-color: #f8e379 !important;
+  background-color: #f5d538 !important;
+  border-bottom-color: #be9f0a !important;
+  border-right-color: #be9f0a !important;
+}
+
+.statbar .hpbar .hp-red
+{
+  border-top-color: #f37f67 !important;
+  background-color: #ee4928 !important;
+  border-bottom-color: #a3260d !important;
+  border-right-color: #a3260 !importantd;
+}
+
+/* Do not edit this part unless you have a DEATH WISH */
+
+.statbar .hpbar .prevhp
+{
+  transition: background-color 1s !important;
+  background: #BBEECC !important;
+  height: 8px !important;
+  border-radius: 3px !important;
+}
+
+.statbar .hpbar .prevhp-yellow
+{
+  background-color: #fcf4ca !important;
+}
+
+.statbar .hpbar .prevhp-red
+{
+  background-color: #facec5 !important;
+}
+
+/* Edit this part and you're merely in DICEY WATERZ */
+
+.statbar .hpbar .hptext
+{
+  position: absolute !important;
+  background: #777777 !important;
+  color: #EEEEEE !important;
+  text-shadow: #000 0 1px 0 !important;
+  font-size: 9px !important;
+  width: 32px !important;
+  height: 12px !important;
+  top: -1px !important;
+  text-align: center !important;
+}
+
+.statbar .hpbar .hptextborder
+{
+  position: absolute !important;
+  background: transparent !important;
+  border-top: 1px solid #777777 !important;
+  border-bottom: 1px solid #777777 !important;
+  width: 4px !important;
+  top: -1px !important;
+  height: 10px !important;
+}
+
+.rstatbar .hpbar .hptext
+{
+  right: -32px !important;
+  border-radius: 0 4px 4px 0 !important;
+}
+
+.lstatbar .hpbar .hptext
+{
+  left: -32px !important;
+  border-radius: 4px 0 0 4px !important;
+}
+
+.rstatbar .hpbar .hptextborder
+{
+  right: -3px !important;
+}
+
+.lstatbar .hpbar .hptextborder
+{
+  left: -3px !important;
+}
+
+.statbar .status
+{
+  min-height: 10px !important;
+  font-size: 7pt !important;
+}
+
+.statbar span
+{
+  padding: 0px 1px !important;
+  border: 1px solid #FF4400 !important;
+  border-radius: 3px !important;
+}
+
+.statbar span.brn,
+.statbar span.psn,
+.statbar span.slp,
+.statbar span.par,
+.statbar span.frz
+{
+  padding: 1px 2px !important;
+  border: 0 !important;
+  border-radius: 3px !important;
+}
+
+.statbar span.brn
+{
+  background: #EE5533 !important;
+  color: #FFFFFF !important;
+}
+
+.statbar span.psn
+{
+  background: #A4009A !important;
+  color: #FFFFFF !important;
+}
+
+.statbar span.par
+{
+  background: #9AA400 !important;
+  color: #FFFFFF !important;
+}
+
+.statbar span.slp
+{
+  background: #AA77AA !important;
+  color: #FFFFFF !important;
+}
+
+.statbar span.frz
+{
+  background: #009AA4 !important;
+  color: #FFFFFF !important;
+}
+
+.statbar span.bad
+{
+  background: #FFE5E0 !important;
+  color: #FF4400 !important;
+  border-color: #FF4400 !important;
+}
+
+.statbar span.good
+{
+  background: #E5FFE0 !important;
+  color: #33AA00 !important;
+  border-color: #33AA00 !important;
+}
+
+.statbar span.neutral
+{
+  background: #F0F0F0 !important;
+  color: #555555 !important;
+  border-color: #555555 !important;
+}
+
+div.foehint div:nth-of-type(1)
+{
+  position: absolute !important;
+  top: 180px !important;
+  left: 390px !important;
+  width: 80px !important;
+  height: 60px !important;
+}
+
+
+/* Edit this part and you're merely in DICEY WATERZ */
+
+.leftbar
+{
+  position: absolute !important;
+  top: -58px !important;
+  left: 0 !important;
+  height: 95px !important;
+  width: 320px !important;
+  background-color: rgba(255,255,255,0) !important;
+  border: 0px solid rgba(215,215,215,0.5) !important;
+  color: #777777 !important;
+  background-image: url(https://s1.postimg.org/v72imipgv/Leftbar3.png) !important;
+  background-position: 0px 0px !important;
+  z-index: 3 !important;
+}
+
+.leftbar .trainer
+{
+  margin-top: 0px !important;
+}
+
+.leftbar .trainersprite
+{
+  position: absolute !important;
+  top: 88px !important;
+  left: 1px !important;
+  opacity: 1 !important;
+}
+
+.leftbar .trainer .teamicons
+{
+  float: right !important;
+  position: relative !important;
+  top: 58px !important;
+  left: -50px !important;
+  opacity: 1 !important;
+}
+
+.leftbar .teamicons:nth-of-type(2) span:nth-of-type(1)
+{
+  position: relative !important;
+  top: -3px !important;
+  left: 5px !important;
+}
+
+.leftbar .teamicons:nth-of-type(2) span:nth-of-type(2)
+{
+  position: relative !important;
+  top: 14px !important;
+  left: 2px !important;
+}
+
+.leftbar .teamicons:nth-of-type(2) span:nth-of-type(3)
+{
+  position: relative !important;
+  top: -3px !important;
+  left: 1px !important;
+}
+
+.leftbar .teamicons:nth-of-type(3) span:nth-of-type(1)
+{
+  position: relative !important;
+  top: 14px !important;
+  left: 11px !important;
+}
+
+.leftbar .teamicons:nth-of-type(3) span:nth-of-type(2)
+{
+  position: relative !important;
+  top: -3px !important;
+  left: 9px !important;
+}
+
+.leftbar .teamicons:nth-of-type(3) span:nth-of-type(3)
+{
+  position: relative  !important;
+  top: 14px !important;
+  left: 6px !important;
+}
+
+.leftbar .trainer strong
+{
+  text-align: left !important;
+  margin-top: 50px !important;
+  position: relative !important;
+  top: 122px !important;
+  left: 107px !important;
+  color: #FFF !important;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000 !important;
+}
+
+.rightbar
+{
+  position: absolute !important;
+  top: -58px !important;
+  right: 0 !important;
+  height: 95px !important;
+  width: 320px !important;
+  background-color: rgba(255,255,255,0) !important;
+  border: 0px solid rgba(215,215,215,0.5) !important;
+  color: #777777 !important;
+  background-image: url(https://s17.postimg.org/oif9dmjmn/Rightbar3.png) !important;
+  background-position: 0px 0px !important;
+  z-index: 3 !important;
+}
+
+.rightbar .trainer
+{
+  margin-top: 0px !important;
+}
+
+.rightbar .trainersprite
+{
+  position: absolute !important;
+  top: 218px !important;
+  right: 1px !important;
+  opacity: 1 !important;
+}
+
+.rightbar .trainer .teamicons
+{
+  float: left !important;
+  position: relative !important;
+  top: 188px !important;
+  right: -050px !important;
+  opacity: 1 !important;
+}
+
+.rightbar .teamicons:nth-of-type(2) span:nth-of-type(1)
+{
+  position: relative !important;
+  top: -3px !important;
+  right: 0px !important;
+}
+
+.rightbar .teamicons:nth-of-type(2) span:nth-of-type(2)
+{
+  position: relative !important;
+  top: 14px !important;
+  right: 2px !important;
+}
+
+.rightbar .teamicons:nth-of-type(2) span:nth-of-type(3)
+{
+  position: relative !important;
+  top: -3px !important;
+  right: 4px !important;
+}
+
+.rightbar .teamicons:nth-of-type(3) span:nth-of-type(1)
+{
+  position: relative !important;
+  top: 14px !important;
+  right: 6px !important;
+}
+
+.rightbar .teamicons:nth-of-type(3) span:nth-of-type(2)
+{
+  position: relative !important;
+  top: -3px !important;
+  right: 7px !important;
+}
+
+.rightbar .teamicons:nth-of-type(3) span:nth-of-type(3)
+{
+  position: relative !important;
+  top: 14px !important;
+  right: 9px !important;
+}
+
+.rightbar .trainer strong
+{
+  text-align: right !important;
+  margin-top: 50px !important;
+  position: relative !important;
+  top: 252px !important;
+  right: 107px !important;
+  color: #FFF !important;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000 !important;
+}
+
+/* Okay, you can realistically edit now without bringing down the Goddess's wrath */
+
+.trainer
+{
+  text-align: center !important;
+  margin-top: 180px !important;
+}
+
+.rightbar .trainer
+{
+  margin-top: 50px !important;
+}
+
+.trainer strong
+{
+  display: block !important;
+  font-size: 8pt !important;
+  margin-bottom: 2px !important;
+  overflow: hidden !important;
+}
+
+.trainer div.teamicons
+{
+  width: 97px !important;
+  height: 24px !important;
+}
+
+.teamicons span
+{
+  float: left !important;
+}
+
+.leftbar .trainer div.trainersprite,
+.leftbar .teamicons span
+{
+  transform: scaleX(-1) !important;
+}
+
+.trainersprite
+{
+  max-width: 80px !important;
+  max-height: 80px !important;
+}
+
+.turn
+{
+  position: absolute !important;
+  top: -46px !important;
+  left: 221px !important;
+  width: 200px !important;
+  height: 33px !important;
+  font-size: 12pt !important;
+  font-weight: bold !important;
+  font-family: 'Maven Pro', sans-serif !important;
+  text-transform: uppercase !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  padding-top: 35px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  opacity: 1 !important;
+  background: url(http://imageshack.com/a/img924/4251/FdqRaJ.png) !important;
+  text-align: center !important;
+  color: #FFF !important;
+  z-index: 2 !important;
+}
+
+.switchmenu button
+{
+  position: relative: !important;
+  overflow: hidden !important;
+  border-color: #00EEFF !important;
+  box-shadow: none !important;
+  color: #EEE !important;
+  text-shadow: 0 0 1px #000 !important;
+  background: #201E1E !important;
+}
+
+.switchmenu button.disabled,
+.switchmenu button:disabled
+{
+  border-color: #171616 !important;
+  box-shadow: none !important;
+  color: #EEE !important;
+  text-shadow: 0 0 1px #000 !important;
+  background: #201E1E !important;
+}
+
+.switchmenu button:after
+{
+  transition: all .55s cubic-bezier(0.19, 1, 0.22, 1);
+  content: "";
+  background: #FFF;
+  opacity: .2;
+  position: absolute;
+  height: 155px;
+  width: 50px;
+  left: -75px;
+  top: -50px;
+  transform: rotate(35deg);
+}
+
+.switchmenu button:hover:after
+{
+  left: 120%;
+}
+
+.switchmenu button.disabled:hover:after,
+.switchmenu button:disabled:hover:after
+{
+  left: -75px;
+}
+
+.movemenu button
+{
+  transition: all .3s !important;
+  background: #201E1E !important;
+  text-shadow: 0 0 2px #000 !important;
+  box-shadow: 0 0 2px #000 !important;
+  font-weight: 100 !important;
+  letter-spacing: 0 !important;
+}
+
+.movemenu button small
+{
+  text-shadow: 0 0 2px #000 !important;
+}
+
+.movemenu button.type-Bug,
+.movemenu button.type-Bug small
+{
+  border-color: #9AC126 !important;
+  color: #9AC126 !important;
+}
+
+.movemenu button.type-Bug:hover,
+.movemenu button.type-Bug:hover small
+{
+  color: #C4E26B !important;
+}
+
+.movemenu button.type-Dark,
+.movemenu button.type-Dark small
+{
+  border-color: #2F4252 !important;
+  color: #2F4252 !important;
+}
+
+.movemenu button.type-Dark:hover,
+.movemenu button.type-Dark:hover small
+{
+  color: #4F6E89 !important;
+}
+
+.movemenu button.type-Dragon,
+.movemenu button.type-Dragon small
+{
+  border-color: #850903 !important;
+  color: #850903 !important;
+}
+
+.movemenu button.type-Dragon:hover,
+.movemenu button.type-Dragon:hover small
+{
+  color: #DA0F05 !important;
+}
+
+.movemenu button.type-Electric,
+.movemenu button.type-Electric small
+{
+  border-color: #F3DA3C !important;
+  color: #F3DA3C !important;
+}
+
+.movemenu button.type-Electric:hover,
+.movemenu button.type-Electric:hover small
+{
+  color: #F8EA8E !important;
+}
+
+.movemenu button.type-Fairy,
+.movemenu button.type-Fairy small
+{
+  border-color: #FF93FF !important;
+  color: #FF93FF !important;
+}
+
+.movemenu button.type-Fairy:hover,
+.movemenu button.type-Fairy:hover small
+{
+  color: #FFC1FF !important;
+}
+
+.movemenu button.type-Fighting,
+.movemenu button.type-Fighting small
+{
+  border-color: #CA6720 !important;
+  color: #CA6720 !important;
+}
+
+.movemenu button.type-Fighting:hover,
+.movemenu button.type-Fighting:hover small
+{
+  color: #E59357 !important;
+}
+
+.movemenu button.type-Fire,
+.movemenu button.type-Fire small
+{
+  border-color: #fA3110 !important;
+  color: #fA3110 !important;
+}
+
+.movemenu button.type-Fire:hover,
+.movemenu button.type-Fire:hover small
+{
+  color: #FB6D56 !important;
+}
+
+.movemenu button.type-Flying,
+.movemenu button.type-Flying small
+{
+  border-color: #A3A9EB !important;
+  color: #A3A9EB !important;
+}
+
+.movemenu button.type-Flying:hover,
+.movemenu button.type-Flying:hover small
+{
+  color: #D5D8F6 !important;
+}
+
+.movemenu button.type-Ghost,
+.movemenu button.type-Ghost small
+{
+  border-color: #453F97 !important;
+  color: #453F97 !important;
+}
+
+.movemenu button.type-Ghost:hover,
+.movemenu button.type-Ghost:hover small
+{
+  color: #6E68C0 !important;
+}
+
+.movemenu button.type-Grass,
+.movemenu button.type-Grass small
+{
+  border-color: #12600A !important;
+  color: #12600A !important;
+}
+
+.movemenu button.type-Grass:hover,
+.movemenu button.type-Grass:hover small
+{
+  color: #1FA511 !important;
+}
+
+.movemenu button.type-Ground,
+.movemenu button.type-Ground small
+{
+  border-color: #BEAA61 !important;
+  color: #BEAA61 !important;
+}
+
+.movemenu button.type-Ground:hover,
+.movemenu button.type-Ground:hover small
+{
+  color: #DCD1A9 !important;
+}
+
+.movemenu button.type-Ice,
+.movemenu button.type-Ice small
+{
+  border-color: #A7E5FA !important;
+  color: #A7E5FA !important;
+}
+
+.movemenu button.type-Ice:hover,
+.movemenu button.type-Ice:hover small
+{
+  color: #E1F6FD !important;
+}
+
+.movemenu button.type-Normal,
+.movemenu button.type-Normal small
+{
+  border-color: #E6E6E6 !important;
+  color: #E6E6E6 !important;
+}
+
+.movemenu button.type-Normal:hover,
+.movemenu button.type-Normal:hover small
+{
+  color: #FFFFFF !important;
+}
+
+.movemenu button.type-Poison,
+.movemenu button.type-Poison small
+{
+  border-color: #921690 !important;
+  color: #921690 !important;
+}
+
+.movemenu button.type-Poison:hover,
+.movemenu button.type-Poison:hover small
+{
+  color: #D420D2 !important;
+}
+
+.movemenu button.type-Psychic,
+.movemenu button.type-Psychic small
+{
+  border-color: #FF63B7 !important;
+  color: #FF63B7 !important;
+}
+
+.movemenu button.type-Psychic:hover,
+.movemenu button.type-Psychic:hover small
+{
+  color: #FFA5D6 !important;
+}
+
+.movemenu button.type-Rock,
+.movemenu button.type-Rock small
+{
+  border-color: #6D5622 !important;
+  color: #6D5622 !important;
+}
+
+.movemenu button.type-Rock:hover,
+.movemenu button.type-Rock:hover small
+{
+  color: #A78434 !important;
+}
+
+.movemenu button.type-Steel,
+.movemenu button.type-Steel small
+{
+  border-color: #777976 !important;
+  color: #777976 !important;
+}
+
+.movemenu button.type-Steel:hover,
+.movemenu button.type-Steel:hover small
+{
+  color: #AAACA9 !important;
+}
+
+.movemenu button.type-Water,
+.movemenu button.type-Water small
+{
+  border-color: #43A3F7 !important;
+  color: #43A3F7 !important;
+}
+
+.movemenu button.type-Water:hover,
+.movemenu button.type-Water:hover small
+{
+  color: #96CCFB !important;
+}
+
+.movemenu button:hover
+{
+  background: #333 !important;
+  border-color: rgba(48, 48, 48, 0) !important;
+  box-shadow: 0 0 0 #000 !important;
+  font-weight: 900 !important;
+  letter-spacing: 1px !important;
+}
+
+.movemenu button:disabled
+{
+  background: #201E1E !important;
+  border-color: #171616 !important;
+  color: #171616 !important;
+  text-shadow: 0px 0px 2px #000 !important;
+  box-shadow: 0px 0px 2px #000 !important;
+}
+
+.movemenu button:disabled small
+{
+  color: #171616 !important;
+}
+
+.movemenu button:disabled:hover
+{
+  background: #201E1E !important;
+  border-color: #171616 !important;
+  box-shadow: 0px 0px 2px #000 !important;
+  font-weight: 100 !important;
+  letter-spacing: 0 !important;
+}
+
+.movemenu .megaevo
+{
+  transition: all .15s !important;
+  background: none !important;
+  border: none !important;
+  color: #EEE !important;
+  text-shadow: 0 0 0 #00EEFF !important;
+}
+
+.movemenu .megaevo:hover
+{
+  transition: all .25s !important;
+  text-shadow: 0 0 5px #00EEFF !important;
+}
+
+.battle-options button,
+.battle-controls .controls .button.replayDownloadButton,
+.battle-controls .controls button[name="saveReplay"],
+.battle-controls button[name="instantReplay"],
+.battle-controls button[name="rewindTurn"],
+.battle-controls button[name="skipTurn"],
+.battle-controls button[name="goToEnd"],
+.battle-controls button[name="switchSides"],
+.battle-controls button[name="closeAndMainMenu"],
+.battle-controls button[name="closeAndRematch"],
+.battle-controls button[name="undoChoice"],
+.battle-controls button[name="setTimer"],
+.battle-controls .button.timerbutton
+{
+  transition: all .15s linear !important;
+  position: relative !important;
+  background: #00E3D0 !important;
+  border: 1px solid #00BAC7 !important;
+  box-shadow: 1px 2px 6px #00C3D1 !important;
+  text-shadow: none !important;
+  color: #000 !important;
+  left: 0 !important;
+  top: 0 !important;
+}
+
+.battle-options button:hover,
+.battle-controls .controls .button.replayDownloadButton:hover,
+.battle-controls .controls button[name="saveReplay"]:hover,
+.battle-controls button[name="instantReplay"]:hover,
+.battle-controls button[name="rewindTurn"]:hover,
+.battle-controls button[name="skipTurn"]:hover,
+.battle-controls button[name="goToEnd"]:hover,
+.battle-controls button[name="switchSides"]:hover,
+.battle-controls button[name="closeAndMainMenu"]:hover,
+.battle-controls button[name="closeAndRematch"]:hover,
+.battle-controls button[name="undoChoice"]:hover,
+.battle-controls button[name="setTimer"]:hover,
+.battle-controls .button.timerbutton:hover,
+.battle-controls .button.disabled
+{
+  transition: all .25s linear !important;
+  position: relative !important;
+  background: #00D3C2 !important;
+  border: 1px solid #00B5C2 !important;
+  box-shadow: -1px -1px 2px #42F3FF !important;
+  color: #007A70 !important;
+  left: 2px !important;
+  top: 3px !important;
+}
+
+.messagebar
+{
+  background: #333 !important;
+  background: rgba(0,0,0,0) !important;
+  text-align: center !important;
+  color: #FFF !important;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000 !important;
+  font-weight: 550 !important;
+  z-index: 2 !important;
+}
+
+.battle-log .rated strong
+{
+  color: #FFF !important;
+  background: none repeat scroll 0% 0% #00EEFF !important;
+  padding: 1px 4px !important;
+  border-radius: 4px !important;
+}
+
+#tooltipwrapper
+{
+  z-index: 500000 !important;
+}
+
+.tooltipinner .tooltip,
+.tooltipinner .tooltip h2,
+.tooltipinner .tooltip .section
+{
+  background: #333 !important;
+  border: 1px solid #00EEFF !important;
+  color: #00FFEA !important;
+}
+
+/*********************** TOURNAMENT SPARKLES ***********************/
+
+@keyframes ripplinggradient
+{
+  0%   {background-position: 400% 0;
+        box-shadow: inset 0 0 8px rgba(0, 0, 0, 1), inset 0 0 12px rgba(0, 175, 219, 1);}
+  50%  {background-position: 50% 0;
+        box-shadow: inset 0 0 8px rgba(0, 0, 0, 0), inset 0 0 12px rgba(0, 175, 219, 0);}
+  100% {background-position: -300% 0;
+        box-shadow: inset 0 0 8px rgba(0, 0, 0, 1), inset 0 0 12px rgba(0, 175, 219, 1);}
+}
+
+.tournament-wrapper
+{
+  border: 2px solid #000 !important;
+}
+
+.tournament-wrapper .tournament-title
+{
+  background: #00DBBB linear-gradient(to right, #00DBBB, #00AFDB, #00DBBB) !important;
+  background-repeat: no-repeat !important;
+  background-size: 133% 100% !important;
+  background-position: 400% 0 !important;
+  border: none !important;
+  box-shadow: inset 0 0 8px #000, inset 0 0 12px #00AFDB !important;
+  color: #000 !important;
+  text-shadow: none !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  overflow: hidden !important;
+}
+
+.tournament-wrapper .tournament-title:hover
+{
+  animation: ripplinggradient .42s linear;
+}
+
+.tournament-wrapper .tournament-title .tournament-format,
+.tournament-wrapper .tournament-title .tournament-generator
+{
+  font-size: 15px !important;
+}
+
+.tournament-wrapper .tournament-title .tournament-status,
+.tournament-wrapper .tournament-title .tournament-toggle
+{
+  display: none !important;
+}
+
+.tournament-wrapper .tournament-box
+{
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+
+.tournament-wrapper .tournament-bracket
+{
+  border: 2px solid #000 !important;
+  border-left: none !important;
+  border-right: none !important;
+  box-shadow: inset 0 0 4px #000, inset 0 0 6px #00AFDB !important;
+  background: #07151E url("https://s18.postimg.org/5iguwphah/Tournament_Background.png") center no-repeat !important;
+  background-size: cover !important;
+  color: #EEE !important;
+}
+
+.tournament-wrapper .tournament-popout-link
+{
+  transition: color .2s !important;
+  text-decoration: none !important;
+  color: #6699FF !important;
+  font-size: 11px !important;
+  font-weight: 900 !important;
+}
+
+.tournament-wrapper .tournament-popout-link:hover
+{
+  transition: color .3s !important;
+  text-decoration: none !important;
+  color: #2255FF !important;
+}
+
+.tournament-wrapper .tournament-tools
+{
+  background: #00DBBB !important;
+  box-shadow: inset 0 0 8px #000, inset 0 0 12px #00AFDB !important;
+  border-bottom: 2px solid #000 !important;
+}
+
+.tournament-wrapper .tournament-tools .button
+{
+  transition: all .3s ease-in-out !important;
+  background: #1E5480 !important;
+  border: 1px solid #1E5480 !important;
+  border-radius: 0 !important;
+  color: #333 !important;
+  text-shadow: 0 0 2px #A5F2FC !important;
+  font-weight: bold !important;
+  box-shadow: inset 0 0 11px rgba(165, 242, 252, 0) !important;
+}
+
+.tournament-wrapper .tournament-tools .button:hover
+{
+  transition: all .22s ease-in-out !important;
+  box-shadow: inset 0 0 11px rgba(165, 242, 252, .75) !important;
+}
+
+.tournament-wrapper .tournament-tools .teamselect strong
+{
+  color: #EEE !important;
+  margin: auto !important;
+}
+
+.tournament-wrapper .tournament-tools .teamselect small
+{
+  display: flex !important;
+  justify-content: space-around !important;
+}
+
+.tournament-wrapper .tournament-tools .teamselect small .picon
+{
+  flex: 0 0 40px !important;
+}
+
+.tournament-wrapper .tournament-tools .teamselect
+{
+  position: relative !important;
+  overflow: hidden !important;
+  border-color: #000 !important;
+  box-shadow: 0 0 8px #00AFDB !important;
+  color: #EEE !important;
+  background: #333 !important;
+}
+
+.tournament-wrapper .tournament-tools button.select.teamselect.disabled,
+.tournament-wrapper .tournament-tools button.select.teamselect:disabled
+{
+  border: #000 !important;
+  box-shadow: inset 0 0 7px #000 !important;
+}
+
+.tournament-wrapper .tournament-tools .teamselect:after
+{
+  transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+  content: "";
+  background: #FFF;
+  opacity: .2;
+  position: absolute;
+  height: 155px;
+  width: 50px;
+  left: -75px;
+  top: -50px;
+  transform: rotate(35deg);
+}
+
+.tournament-wrapper .tournament-tools .teamselect:hover:after
+{
+  left: 120%;
+}
+
+.tournament-wrapper .tournament-tools button.select.teamselect.disabled:hover:after,
+.tournament-wrapper .tournament-tools button.select.teamselect:disabled:hover:after
+{
+  left: -75px !important;
+}
+
+.tournament-wrapper .tournament-nomatches,
+.tournament-wrapper .tournament-challenging-message
+{
+  color: #000 !important;
+}
+
+.ps-popup.tournament-popout-bracket
+{
+  background: #07151E url("https://s18.postimg.org/5iguwphah/Tournament_Background.png") center no-repeat !important;
+  background-size: cover !important;
+  overflow: auto !important;
+}

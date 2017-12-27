@@ -1,0 +1,177 @@
+@keyframes ripplinggradient
+{
+  0%   {background-position: 400% 0;
+        box-shadow: inset 0 0 8px rgba(0, 0, 0, 1), inset 0 0 12px rgba(0, 175, 219, 1);}
+  50%  {background-position: 50% 0;
+        box-shadow: inset 0 0 8px rgba(0, 0, 0, 0), inset 0 0 12px rgba(0, 175, 219, 0);}
+  100% {background-position: -300% 0;
+        box-shadow: inset 0 0 8px rgba(0, 0, 0, 1), inset 0 0 12px rgba(0, 175, 219, 1);}
+}
+
+.tournament-wrapper
+{
+  border: 2px solid #000 !important;
+}
+
+.tournament-wrapper .tournament-title
+{
+  background: #00DBBB linear-gradient(to right, #00DBBB, #00AFDB, #00DBBB) !important;
+  background-repeat: no-repeat !important;
+  background-size: 133% 100% !important;
+  background-position: 400% 0 !important;
+  border: none !important;
+  box-shadow: inset 0 0 8px #000, inset 0 0 12px #00AFDB !important;
+  color: #000 !important;
+  text-shadow: none !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  overflow: hidden !important;
+}
+
+.tournament-wrapper .tournament-title:hover
+{
+  animation: ripplinggradient .42s linear;
+}
+
+.tournament-wrapper .tournament-title .tournament-format,
+.tournament-wrapper .tournament-title .tournament-generator
+{
+  font-size: 15px !important;
+}
+
+.tournament-wrapper .tournament-title .tournament-status,
+.tournament-wrapper .tournament-title .tournament-toggle
+{
+  display: none !important;
+}
+
+.tournament-wrapper .tournament-box
+{
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+
+.tournament-wrapper .tournament-bracket
+{
+  border: 2px solid #000 !important;
+  border-left: none !important;
+  border-right: none !important;
+  box-shadow: inset 0 0 4px #000, inset 0 0 6px #00AFDB !important;
+  background: #07151E url("https://s18.postimg.org/5iguwphah/Tournament_Background.png") center no-repeat !important;
+  background-size: cover !important;
+  color: #EEE !important;
+}
+
+.tournament-wrapper .tournament-popout-link
+{
+  transition: color .2s !important;
+  text-decoration: none !important;
+  color: #6699FF !important;
+  font-size: 11px !important;
+  font-weight: 900 !important;
+}
+
+.tournament-wrapper .tournament-popout-link:hover
+{
+  transition: color .3s !important;
+  text-decoration: none !important;
+  color: #2255FF !important;
+}
+
+.tournament-wrapper .tournament-tools
+{
+  background: #00DBBB !important;
+  box-shadow: inset 0 0 8px #000, inset 0 0 12px #00AFDB !important;
+  border-bottom: 2px solid #000 !important;
+}
+
+.tournament-wrapper .tournament-tools .button
+{
+  transition: all .3s ease-in-out !important;
+  background: #1E5480 !important;
+  border: 1px solid #1E5480 !important;
+  border-radius: 0 !important;
+  color: #333 !important;
+  text-shadow: 0 0 2px #A5F2FC !important;
+  font-weight: bold !important;
+  box-shadow: inset 0 0 11px rgba(165, 242, 252, 0) !important;
+}
+
+.tournament-wrapper .tournament-tools .button:hover
+{
+  transition: all .22s ease-in-out !important;
+  box-shadow: inset 0 0 11px rgba(165, 242, 252, .75) !important;
+}
+
+.tournament-wrapper .tournament-tools .teamselect strong
+{
+  color: #EEE !important;
+  margin: auto !important;
+}
+
+.tournament-wrapper .tournament-tools .teamselect small
+{
+  display: flex !important;
+  justify-content: space-around !important;
+}
+
+.tournament-wrapper .tournament-tools .teamselect small .picon
+{
+  flex: 0 0 40px !important;
+}
+
+.tournament-wrapper .tournament-tools .teamselect
+{
+  position: relative !important;
+  overflow: hidden !important;
+  border-color: #000 !important;
+  box-shadow: 0 0 8px #00AFDB !important;
+  color: #EEE !important;
+  background: #333 !important;
+}
+
+.tournament-wrapper .tournament-tools button.select.teamselect.disabled,
+.tournament-wrapper .tournament-tools button.select.teamselect:disabled
+{
+  border: #000 !important;
+  box-shadow: inset 0 0 7px #000 !important;
+}
+
+.tournament-wrapper .tournament-tools .teamselect:after
+{
+  transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+  content: "";
+  background: #FFF;
+  opacity: .2;
+  position: absolute;
+  height: 155px;
+  width: 50px;
+  left: -75px;
+  top: -50px;
+  transform: rotate(35deg);
+}
+
+.tournament-wrapper .tournament-tools .teamselect:hover:after
+{
+  left: 120%;
+}
+
+.tournament-wrapper .tournament-tools button.select.teamselect.disabled:hover:after,
+.tournament-wrapper .tournament-tools button.select.teamselect:disabled:hover:after
+{
+  left: -75px !important;
+}
+
+.tournament-wrapper .tournament-nomatches,
+.tournament-wrapper .tournament-challenging-message
+{
+  color: #000 !important;
+}
+
+.ps-popup.tournament-popout-bracket
+{
+  background: #07151E url("https://s18.postimg.org/5iguwphah/Tournament_Background.png") center no-repeat !important;
+  background-size: cover !important;
+  overflow: auto !important;
+}

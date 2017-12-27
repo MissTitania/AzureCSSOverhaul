@@ -1,0 +1,321 @@
+@keyframes cardbuttonburst
+{
+  0%   {box-shadow: inset 0 0 11px rgba(165, 242, 252, 0);
+        outline-color: rgba(96, 224, 251, .7);
+        outline-offset: 0px;}
+  100% {box-shadow: inset 0 0 11px rgba(165, 242, 252, .75);
+        outline-color: rgba(96, 224, 251, 0);
+        outline-offset: 11px;}
+}
+
+@keyframes cardbuttonunburst
+{
+  0%   {box-shadow: inset 0 0 11px rgba(165, 242, 252, .75);
+        outline-color: rgba(96, 224, 251, 0);
+        outline-offset: 11px;}
+  100% {box-shadow: inset 0 0 11px rgba(165, 242, 252, 0);
+        outline-color: rgba(96, 224, 251, .7);
+        outline-offset: 0px;}
+}
+
+body
+{
+  transform: translateZ(0) !important; /* A fix for webkit sub-pixel font rendering failure during CSS3 transitions */
+  background: url("https://s1.postimg.org/e4lhxkyj3/Main_Background.png") no-repeat center;
+  background-size: cover !important;
+}
+
+.header
+{
+  background: url("https://s11.postimg.org/w9cbc1kk3/Logo.png") left no-repeat !important;
+}
+
+.header .logo
+{
+  opacity: 0 !important;
+}
+
+.header .maintabbarbottom
+{
+  background: linear-gradient(rgba(57, 0, 121, .72), #000) !important;
+  border-color: rgba(57, 0, 121, .72) #000 #000 !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+.tabbar.maintabbar
+{
+  overflow: hidden !important;
+}
+
+.tabbar a.button,
+.tabbar li:only-child a.button.cur,
+.tabbar li:only-child a.button.cur:hover,
+.tabbar li:only-child .button.cur.subtle-notifying
+{
+  transition: color .35s, box-shadow .35s !important;
+  position: relative !important;
+  background: #390079 !important;
+  border-color: #400088 !important;
+  border-style: solid !important;
+  color: #EEE !important;
+  text-shadow: none !important;
+  border-width: 2px !important;
+  top: -2px !important;
+  opacity: .75 !important;
+  box-shadow: 0 0 0 #004C81 !important;
+}
+
+.tabbar .overflow .button
+{
+  transition: color .35s, box-shadow .35s !important;
+  background: #390079 !important;
+  border-color: #390079 !important;
+  color: #EEE !important;
+  text-shadow: none !important;
+  opacity: .75 !important;
+  box-shadow: 0 0 0 #004C81 !important;
+}
+
+.tabbar a.button:hover,
+.tabbar .overflow .button:hover
+{
+  color: #004C81 !important;
+  box-shadow: 0 0 10px #004C81 !important;
+}
+
+.tabbar .button.subtle-notifying
+{
+  background: #470098 !important;
+  border-color: #2D0060 !important;
+  border-style: outset !important;
+  color: #EEE !important;
+}
+
+.tabbar .button.notifying
+{
+  background: #1D267D url("https://s14.postimg.org/7ps1mhmkx/Notification_Background_3.gif")  no-repeat center !important;
+  background-size: 100% 100% !important;
+  border-color: #2D0060 !important;
+  border-style: outset !important;
+}
+
+.tabbar a.button.cur,
+.tabbar a.button.cur:hover,
+.tabbar .button.cur.subtle-notifying
+{
+  background: #32006A !important;
+  border-color: #4C00A2 !important;
+  border-style: inset !important;
+  border-top: none !important;
+  color: #7700FE !important;
+  text-shadow: -1px -1px 1px #1F0041 !important;
+  z-index: 1 !important;
+  box-shadow: 0 0 0 #EEE !important;
+}
+
+.tabbar li:first-child a.button.cur,
+.tabbar li:first-child a.button.cur:hover,
+.tabbar li:first-child .button.cur.subtle-notifying
+{
+  border-left: none !important;
+}
+
+.tabbar li:last-child a.button.cur,
+.tabbar li:last-child a.button.cur:hover,
+.tabbar li:last-child .button.cur.subtle-notifying
+{
+  border-right: none !important;
+}
+
+.tabbar .closebutton,
+.tabbar li:only-child a.button.cur~.closebutton,
+.tabbar li:only-child a.button.cur:hover~.closebutton,
+.tabbar li:only-child .button.cur.subtle-notifying~.closebutton
+{
+  transition: color .3s !important;
+  position: relative !important;
+  color: #EEE !important;
+  top: -1px !important;
+}
+
+.tabbar a.button.cur~.closebutton,
+.tabbar a.button.cur:hover~.closebutton,
+.tabbar .button.cur.subtle-notifying~.closebutton
+{
+  color: #7700FE !important;
+  text-shadow: -1px -1px 1px #1F0041 !important;
+}
+
+.tabbar .closebutton:hover,
+.tabbar li:only-child a.button.cur~.closebutton:hover,
+.tabbar li:only-child .button.cur.subtle-notifying~.closebutton:hover
+{
+  color: #004C81 !important;
+}
+
+.tabbar a.button.cur~.closebutton:hover,
+.tabbar .button.cur.subtle-notifying~.closebutton:hover
+{
+  color: #023381 !important;
+  text-shadow: -1px -1px 1px #1F0041 !important;
+}
+
+.header .userbar .fa.fa-user
+{
+  display: none !important;
+}
+
+.header .userbar .username
+{
+  transition: all .35s !important;
+  display: inline-block !important;
+  transform: scaleX(0) !important;
+  transform-origin: 100% 50% !important;
+  opacity: 0 !important;
+}
+
+.header .userbar:hover .username
+{
+  transform: scaleX(1) !important;
+  opacity: 1 !important;
+}
+
+.header .userbar button
+{
+  transition: all .15s linear !important;
+  position: relative !important;
+  background: #400088 !important;
+  border: 1px solid #00406D !important;
+  text-shadow: 0 0 0 #390079 !important;
+  box-shadow: 1px 2px 6px #004677 !important;
+  color: #000 !important;
+  left: 0 !important;
+  top: 0 !important;
+  border-radius: 5px !important;
+}
+
+.header .userbar button:hover,
+.header .userbar button:disabled
+{
+  transition: all .2s linear !important;
+  position: relative !important;
+  background: #350071 !important;
+  border: 1px solid #003D68 !important;
+  text-shadow: -1px -1px 0 #220049 !important;
+  box-shadow: -1px -1px 2px #0088E7 !important;
+  color: #6400DF !important;
+  left: 2px !important;
+  top: 3px !important;
+  border-radius: 5px !important;
+}
+
+.ps-overlay
+{
+  background: rgba(0, 18, 30, .75) !important;
+}
+
+.ps-popup
+{
+  transition: all .5s !important;
+  border: solid 3px #1E5480 !important;
+  border-radius: 8px !important;
+  background: #07151E !important;
+  color: #1E5480 !important;
+  box-shadow: inset 0 0 3px #A5F2FC, inset 0 0 9px #1E5480, 0 0 3px #60E0FB, 0 0 5px #1E5480 !important;
+}
+
+.ps-popup hr
+{
+  border-color: #1E5480 !important
+}
+
+.ps-popup .card-button[name="send"]
+{
+  border: 1px solid #1E5480 !important;
+  border-radius: 0 !important;
+  color: #07151E !important;
+  text-shadow: 0 0 2px #A5F2FC !important;
+  font-weight: bold !important;
+  outline: 1px solid !important;
+  box-shadow: inset 0 0 11px rgba(165, 242, 252, 0) !important;
+  outline-color: rgba(96, 224, 251, .7) !important;
+  outline-offset: 0px !important;
+  animation: cardbuttonunburst .9s cubic-bezier(0.78, 0, 0.81, 0);
+}
+
+.ps-popup .card-button[name="send"]:not([style*="background-color"])
+{
+  background: #1E5480 !important;
+}
+
+.ps-popup .card-button[name="send"]:hover
+{
+  animation: cardbuttonburst .9s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.ps-popup .userdetails~.buttonbar button
+{
+  transition: all .3s ease-in-out !important;
+  background: #1E5480 !important;
+  border: 1px solid #1E5480 !important;
+  border-radius: 0 !important;
+  color: #07151E !important;
+  text-shadow: 0 0 2px #A5F2FC !important;
+  font-weight: bold !important;
+  box-shadow: inset 0 0 11px rgba(165, 242, 252, 0) !important;
+  border-radius: 4px !important;
+}
+
+.ps-popup .userdetails~.buttonbar button:hover
+{
+  transition: all .22s ease-in-out !important;
+  box-shadow: inset 0 0 11px rgba(165, 242, 252, .75) !important;
+  color: #000 !important;
+}
+
+.ps-popup a.ilink,
+.ps-popup a,
+.ps-popup .popupmenu li button
+{
+  transition: color .2s !important;
+  color: #6699FF !important;
+  background: none !important;
+}
+
+.ps-popup a.ilink:hover,
+.ps-popup a:hover,
+.ps-popup .popupmenu li button:hover
+{
+  transition: color .3s !important;
+  color: #2255FF !important;
+  background: none !important;
+}
+
+.ps-popup .popupmenu li h3
+{
+  text-align: center !important;
+  text-shadow: 1px 0 #60E0FB, -1px 0 #60E0FB, 0 1px #60E0FB, 0 -1px #60E0FB !important;
+  font-weight: bold !important;
+}
+
+.ps-popup .popupmenu li button
+{
+  text-align: center !important;
+}
+
+.ps-popup .buttonbar button
+{
+  transition: all .42s !important;
+  background: #FFF !important;
+  border: 1px solid #555 !important;
+  color: #000 !important;
+  text-shadow: none !important;
+  padding: 3px 8px !important;
+}
+
+.ps-popup .buttonbar button:hover
+{
+  background: #B8B8FF !important;
+  border: 1px solid #333 !important;
+}

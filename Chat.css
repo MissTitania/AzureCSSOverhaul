@@ -1,0 +1,471 @@
+@keyframes neonglowtext
+{
+  0%   {text-shadow: 0 0 3px #FFF, 0 0 6px #FFF, 0 0 9px #FFF, 0 0 12px #07F, 0 0 21px #07F, 0 0 24px #07F, 0 0 30px #07F;}
+  100% {text-shadow: 0 0 1px #FFF, 0 0 2px #FFF, 0 0 3px #FFF, 0 0 4px #07F, 0 0 7px #07F, 0 0 8px #07F, 0 0 10px #07F;}
+}
+
+.ps-room.ps-room-light
+{
+  background: none !important;
+  border-color: #000 !important;
+}
+
+.ps-room.ps-room-light.scrollable
+{
+  background: rgba(48, 48, 48, 0.6) !important;
+}
+
+.chat-log
+{
+  background: rgba(48, 48, 48, 0.8) url("https://s17.postimg.org/8wyuwnxwv/Mascot3.png") top right no-repeat !important;
+  border: 2px solid #000 !important;
+  color: #EEE !important;
+}
+
+.chat-log .chat,
+.battle-log .chat
+{
+  background: none !important;
+}
+
+.chat-log .chat small
+{
+  color: rgba(0, 255, 234, .8) !important;
+}
+
+.chat.highlighted
+{
+  background: linear-gradient(to bottom right, #00AFDB, #00DBAC) !important;
+  color: #FFF !important;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000 !important;
+}
+
+.chat span.message-announce
+{
+  background: #1D267D url("https://s14.postimg.org/7ps1mhmkx/Notification_Background_3.gif")  no-repeat center !important;
+  background-size: 100% 150% !important;
+  color: #FFF !important;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000 !important;
+}
+
+.chat.revealed
+{
+  color: #FFF !important;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000 !important;
+  background: #AE0602 !important;
+}
+
+.chat:not(.highlighted):not(.revealed) em b
+{
+  text-shadow: 0 -1px 0 #FFF, 0 1px 0 #303030, 0 2px 0 #282828, 0 3px 0 #202020, 0 4px 0 #181818, 0 5px 0 #101010, 0 7px 10px rgba(0, 0, 0, 0.9) !important;
+}
+
+.chat.chatmessage-titaniahime:not(.highlighted):not(.revealed) em b,
+.chat.chatmessage-miyu:not(.highlighted):not(.revealed) em b
+{
+  color: #FFF !important;
+  animation: neonglowtext 1.1s ease-in-out infinite alternate;
+}
+
+.chat-log .chat em a,
+.chat-log .notice .ilink,
+.chat-log .notice .ilink strong
+{
+  transition: color .2s !important;
+  color: #6699FF !important;
+}
+
+.chat-log .chat em a:hover
+{
+  transition: color .3s !important;
+  color: #2255FF !important;
+}
+
+.chat-log .notice .ilink:hover,
+.chat-log .notice .ilink:hover strong
+{
+  transition: color .3s !important;
+  color: #2255FF !important;
+  text-decoration: none !important;
+}
+
+.chat-log .message-error
+{
+  color: #FF0000 !important;
+}
+
+.chat-log .infobox
+{
+  transition: all .45s !important;
+  background: rgba(0, 0, 0, 0) !important;
+  border-color: #000 !important;
+  box-shadow: inset 0 0 5px #00EEFF !important;
+  color: #EEE !important;
+  overflow: auto !important;
+}
+
+.chat-log .infobox:hover
+{
+  transition: all .45s !important;
+  background: rgba(0, 0, 0, .4) !important;
+  box-shadow: inset 0 0 11px #00EEFF !important;
+}
+
+.message-pm
+{
+  color: rgba(0, 255, 234, .5) !important;
+}
+
+.broadcast-red,
+.broadcast-green,
+.broadcast-blue
+{
+  border: 1px solid #000 !important;
+  color: #FFFFFF !important;
+  font-weight: #600 !important;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000 !important;
+}
+
+.broadcast-red
+{
+  background: #4A130D url("https://s9.postimg.org/w8bzbro7z/Broadcast_Red.jpg") center no-repeat !important;
+  background-size: cover !important;
+}
+
+.broadcast-green
+{
+  background: #214A0D url("https://s21.postimg.org/ban80mdmv/Broadcast_Green.jpg") center no-repeat !important;
+  background-size: cover !important;
+}
+
+.broadcast-blue
+{
+  background: #0D294A url("https://s1.postimg.org/csda7rklr/Broadcast_Blue.jpg") center no-repeat !important;
+  background-size: cover !important;
+}
+
+.chat-log .utilichart h3,
+.chat-log .dexentry h3,
+.chat-log .resultheader h3
+{
+  background: #D4F5F7 !important;
+  border-color: #155281 !important;
+  border-right-color: #D4F5F7 !important;
+  color: #155281 !important;
+}
+
+.chat-log .utilichart .typecol img
+{
+  opacity: .8 !important;
+}
+
+.chat-log .utilichart .col,
+.chat-log .utilichart .col.numcol,
+.chat-log .utilichart .col.abilitycol,
+.chat-log .utilichart .col.twoabilitycol,
+.chat-log .utilichart .col.statcol,
+.chat-log .utilichart .col.namecol,
+.chat-log .utilichart .col.movenamecol,
+.chat-log .utilichart .col.labelcol em,
+.chat-log .utilichart .col.widelabelcol em,
+.chat-log .utilichart .col.pplabelcol em,
+.chat-log .infobox span,
+.chat-log .uhtml-friendsdisplay tbody .card-button
+{
+  color: #EEE !important;
+}
+
+.chat-log .utilichart .col.statcol em,
+.chat-log .utilichart .col.abilitydesccol,
+.chat-log .utilichart .col.itemdesccol,
+.chat-log .utilichart .col.movedesccol,
+.chat-log .utilichart .col.labelcol,
+.chat-log .utilichart .col.widelabelcol,
+.chat-log .utilichart .col.pplabelcol,
+.chat-log .utilichart .bstcol em,
+.chat-log .infobox .message-learn-list,
+.chat-log .infobox a
+{
+  color: #555 !important;
+}
+
+.chat-log .infobox .message-learn-canlearn
+{
+  color: #00FF00 !important;
+}
+
+.chat-log .infobox .message-learn-cannotlearn
+{
+  color: #FF0000 !important;
+}
+
+.chat-log .uhtml-friendsdisplay tbody .card-button
+{
+  border-color: #EEE !important;
+}
+
+.chat-log .notice div[style*="background-color: cornsilk"]
+{
+  color: #000 !important;
+}
+
+.chat-log .notice .infobox .ladder td,
+.chat-log .notice .infobox .ladder div
+{
+  background: none !important;
+}
+
+.chat-log .notice .infobox .gangth
+{
+  background: #494669 !important;
+  border: 1px solid #B0ADD5 !important;
+  padding: 5px 15px !important;
+  text-align: center !important;
+  font-size: 13pt !important;
+  font-family: sans-serif !important;
+  color: #FFF !important;
+}
+
+.chat-log .notice .infobox .gangtd
+{
+  background: url("http://i.imgur.com/w6Fn1hR.png") !important;
+  border: 1px solid #B0ADD5 !important;
+  padding: 4px !important;
+  text-align: center !important;
+  font-size: 11pt !important;
+  font-family: sans-serif !important;
+  color: #000 !important;
+}
+
+.chat-log .notice .infobox .gangbtn
+{
+  background: #71C973 !important;
+  border: 1px solid #05DC0C !important;
+  padding: 4px 20px 6px !important;
+  color: #FFF !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8) !important;
+}
+
+.chat-log .notice .infobox .gangbtn:hover
+{
+  background: #85CE87 !important;
+  padding: 5px 20px !important;
+  box-shadow: none !important;
+}
+
+.chat-log .poll span
+{
+  color: #00FFEA !important;
+  border-color: #00EEFF !important;
+}
+
+.chat-log .pollButton
+{
+  background: #F8F8F8 !important;
+  color: #444 !important;
+  border: 1px solid #AAA !important;
+  margin: 2px !important;
+  padding-top: 2px !important;
+  padding-bottom: 3px !important;
+}
+
+.chat-log .pollButton:hover
+{
+  background: #F6F6F6 !important;
+  border-color: #337AB7 !important;
+  color: #276297 !important;
+}
+
+.chat-log .poll summary:focus
+{
+  outline-style: none !important;
+}
+
+.userlist
+{
+  background: rgba(48, 48, 48, 0.8) !important;
+  border: 1px solid #000 !important;
+  color: #000 !important;
+}
+
+.userlist .userlist-count
+{
+  color: #EEE !important;
+  box-shadow: inset 0 0 5px #000 !important;
+}
+
+.userlist.userlist-minimized .userlist-count,
+.userlist.userlist-maximized .userlist-count
+{
+  transition: background .45s !important;
+  background: rgba(0, 0, 0, 0) !important;
+}
+
+.userlist.userlist-minimized .userlist-count:hover,
+.userlist.userlist-maximized .userlist-count:hover
+{
+  transition: background .3s !important;
+  background: rgba(0, 0, 0, .3) !important;
+}
+
+.userlist li
+{
+  border-color: #000 !important;
+}
+
+.userlist li button
+{
+  transition: all .45s !important;
+  background: rgba(0, 0, 0, 0) !important;
+  box-shadow: inset 0 0 5px #000 !important;
+}
+
+.userlist li button:hover
+{
+  transition: all .3s !important;
+  background: rgba(0, 0, 0, .48) !important;
+  box-shadow: inset 0 0 0 #000 !important;
+}
+
+.userlist .userbutton .group
+{
+  color: rgba(0, 255, 234, .8) !important;
+}
+
+.chat-log-add
+{
+  background: rgba(48, 48, 48, 0.8) !important;
+  border-color: #000 !important;
+  box-shadow: inset 0 0 4px #000 !important;
+}
+
+.chat-log-add .textbox
+{
+  transition: background .4s, box-shadow .4s !important;
+  background: rgba(0, 0, 0, 0) !important;
+  border-color: #000 !important;
+  box-shadow: inset 0 0 4px #00EEFF !important;
+  color: #EEE !important;
+}
+
+.chat-log-add .textbox:hover,
+.chat-log-add .textbox:focus
+{
+  background: rgba(0, 0, 0, .35) !important;
+  box-shadow: inset 0 0 7px #00EEFF !important;
+}
+
+.chat-log-add small
+{
+  color: #EEE !important;
+}
+
+.pad .roomlist div .ilink,
+.pad .roomlisttop .button,
+.pad button[name="refresh"],
+.pad button[name="close"],
+.pad button[name="closeHide"],
+.pad button[name="joinRoomPopup"],
+.chat-log-add button,
+.ladder.pad button
+{
+  transition: all .15s linear !important;
+  position: relative !important;
+  background: #00E3D0 !important;
+  border: 1px solid #00BAC7 !important;
+  box-shadow: 1px 2px 6px #00C3D1 !important;
+  text-shadow: none !important;
+  color: #000 !important;
+  left: 0 !important;
+  top: 0 !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  border-radius: 5px !important;
+}
+
+.pad .roomlist div .ilink:hover,
+.pad .roomlisttop .button:hover,
+.pad button[name="refresh"]:hover,
+.pad button[name="close"]:hover,
+.pad button[name="closeHide"]:hover,
+.pad button[name="joinRoomPopup"]:hover,
+.chat-log-add button:hover,
+.ladder.pad button:hover
+{
+  transition: all .2s linear !important;
+  position: relative !important;
+  background: #00D3C2 !important;
+  border: 1px solid #00B5C2 !important;
+  box-shadow: -1px -1px 2px #42F3FF !important;
+  color: #007A70 !important;
+  left: 2px !important;
+  top: 3px !important;
+}
+
+.pad .select.formatselect
+{
+  overflow: hidden !important;
+  border-color: #00EEFF !important;
+  box-shadow: none !important;
+  color: #EEE !important;
+  text-shadow: 0 0 1px #000 !important;
+  background: #201E1E !important;
+  text-align: center !important;
+  position: relative !important;
+}
+
+.pad .select.formatselect:after
+{
+  transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+  content: "";
+  background: #FFF;
+  opacity: .2;
+  position: absolute;
+  height: 155px;
+  width: 50px;
+  left: -75px;
+  top: -50px;
+  transform: rotate(35deg);
+}
+
+.pad .select.formatselect:hover:after
+{
+  left: 120%;
+}
+
+.pad h2,
+.pad label,
+.pad p
+{
+  color: #111 !important;
+  text-shadow: 0 0 5px #FFF !important;
+}
+
+.pad .roomlist>label
+{
+  transition: text-shadow .4s !important;
+  text-shadow: 0 0 5px #FFF !important;
+}
+
+.pad .roomlist>label:hover
+{
+  transition: text-shadow .35s !important;
+  text-shadow: 0 0 9px #00EEFF !important;
+}
+
+.pad .roomcounters .picon.icon-left
+{
+  position: relative !important;
+  top: 4px !important;
+  background: url("https://s3.postimg.org/6qt4qwpqb/Popplio.png") bottom no-repeat !important;
+}
+
+.pad .roomcounters .picon.icon-right
+{
+  background: url("https://s24.postimg.org/rc1d0kq9h/Brionne.png") bottom no-repeat !important;
+}
+
+.pad .roomlist .picon
+{
+  background: url("https://s16.postimg.org/5mt07y139/Primarina.png") bottom no-repeat !important;
+}
