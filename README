@@ -1,0 +1,3 @@
+This is set of style sheets you can use to spruce up your Pokemon Showdown experience.  The art assets I utilized/drew/photoshopped are contained in the repository as well.  Not recommended for mobile users.
+
+To make use of these, simply inject the PrinCSS.css file with your browser dev tools, then view azure.psim.us.  Altered elements include nearly all components, so you can view the impact across private messages, public chats, menus, battles, and more!
